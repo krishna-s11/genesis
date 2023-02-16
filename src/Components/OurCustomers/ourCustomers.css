@@ -1,0 +1,42 @@
+.our_customers_pg {
+  width: 100%;
+  background-color: #fff;
+  height: 70vh;
+  padding-top: 50px;
+}
+.our_customers_pg h1 {
+  display: flex;
+  justify-content: center;
+}
+.our_customer_slider {
+  width: 100%;
+  margin-top: 40px;
+}
+.our_customer_slider div {
+  display: flex;
+  align-items: center;
+}
+#reliance_container {
+  display: none;
+}
+.bharat_img {
+  width: 400px;
+  transform: translateX(-20px);
+}
+.indian_oil_img {
+  width: 300px;
+}
+.ntpc_img {
+  width: 300px;
+}
+.bhel_img {
+  width: 300px;
+}
+.ongc_img {
+  width: 200px;
+  transform: translateX(30px);
+}
+.reliance_img {
+  width: 200px;
+  transform: translateX(60px);
+}

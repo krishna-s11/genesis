@@ -3,6 +3,9 @@ import "./hero.css";
 import { BsArrowRightCircle } from "react-icons/bs";
 
 const Hero = () => {
+  const getInTouch = () => {
+    window.scrollTo(0, document.body.scrollHeight);
+  };
   return (
     <div className="hero">
       <div className="hero_left">
@@ -11,7 +14,7 @@ const Hero = () => {
         <p>
           "Creating value through compehrensive solutions for energy sector"
         </p>
-        <p id="getintouch">
+        <p id="getintouch" onClick={getInTouch}>
           Get in Touch{" "}
           <BsArrowRightCircle style={{ transform: "translate(3px,2.5px)" }} />
         </p>

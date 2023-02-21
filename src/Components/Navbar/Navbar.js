@@ -13,6 +13,10 @@ const Navbar = () => {
     console.log(nav);
   });
 
+  const getInTouch = () => {
+    window.scrollTo(0, document.body.scrollHeight);
+  };
+
   return (
     <div className="navbar">
       <div style={{ fontWeight: "700", color: "#f6d337" }}>GENESIS ENERGY</div>
@@ -36,7 +40,9 @@ const Navbar = () => {
         <Link to="/services">
           <li className="nav_items">Services</li>
         </Link>
-        <li className="nav_items">Get in touch</li>
+        <li className="nav_items" onClick={getInTouch}>
+          Get in touch
+        </li>
       </ul>
     </div>
   );

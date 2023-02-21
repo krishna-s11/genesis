@@ -1,6 +1,36 @@
 .hero {
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 70vh;
+  display: flex;
+  background: url(../../Assets/background.png);
+  background-size: 100%;
+  background-position-y: 30%;
+  padding: 0 120px;
+}
+.hero_left {
+  width: 400px;
+}
+.hero_left h1 {
+  margin-bottom: 10px;
+}
+#welcome {
+  font-size: 48px;
+  letter-spacing: 1px;
+}
+#genesis {
+  font-size: 52px;
+}
+.hero_left p {
+  line-height: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.hero_left a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+}
+#getintouch {
+  margin-top: 50px;
 }

@@ -41,6 +41,7 @@
 .services_card_container {
   width: 100%;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .services_card {

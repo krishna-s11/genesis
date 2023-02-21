@@ -1,0 +1,10 @@
+.our_products_home {
+  width: 100%;
+  height: 80vh;
+  padding-top: 50px;
+  background-color: #fff;
+}
+.our_products_home h1 {
+  display: flex;
+  justify-content: center;
+}

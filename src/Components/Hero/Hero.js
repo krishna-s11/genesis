@@ -1,6 +1,5 @@
 import React from "react";
 import "./hero.css";
-import img from "../../Assets/background.png";
 import { BsArrowRightCircle } from "react-icons/bs";
 
 const Hero = () => {

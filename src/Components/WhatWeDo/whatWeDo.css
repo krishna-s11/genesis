@@ -3,6 +3,7 @@
   height: 80vh;
   background-color: #f6d337;
   padding-top: 50px;
+  z-index: 3;
 }
 .what_we_do_pg h1 {
   width: 100%;

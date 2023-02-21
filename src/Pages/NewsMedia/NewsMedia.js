@@ -11,11 +11,16 @@ const NewsMedia = () => {
         </div>
       </div>
       <div className="news_media_content">
-        <h1>Our Latest News and Blogs</h1>
+        <h1>Our Latest News</h1>
         <div className="news_media_card_container">
           <NewsCard />
           <NewsCard />
           <NewsCard />
+        </div>
+      </div>
+      <div className="news_media_content">
+        <h1>Our Blogs</h1>
+        <div className="news_media_card_container">
           <NewsCard />
           <NewsCard />
           <NewsCard />

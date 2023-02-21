@@ -1,0 +1,21 @@
+.project_card {
+  width: 350px;
+  min-height: 370px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-right: 30px;
+  margin-top: 50px;
+}
+.project_card img {
+  width: 350px;
+  height: 180px;
+}
+.project_card h3 {
+  margin: 10px 15px;
+}
+.project_card ul {
+  margin-left: 30px;
+}
+.project_card ul li {
+  margin-bottom: 5px;
+}

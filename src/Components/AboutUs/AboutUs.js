@@ -1,6 +1,7 @@
 import React from "react";
 import "./aboutus.css";
 import img1 from "../../Assets/aboutus.jpg";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
@@ -18,7 +19,9 @@ const AboutUs = () => {
             Genesis Energy has rapidly established a reputation for offering
             dynamic solutions with adroitness.
           </p>
-          <a href="none">Read more -{">"}</a>
+          <Link to="/about_us">
+            <a href="none">Read more -{">"}</a>
+          </Link>
         </div>
         <div className="aboutus_lifted_box_right">
           <img src={img1} alt="about us" className="aboutus_img" />

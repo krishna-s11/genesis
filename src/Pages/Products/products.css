@@ -1,14 +1,14 @@
-.about_pg {
+.products_pg {
   width: 100%;
 }
-.hero_about_pg {
+.products_hero {
   width: 100%;
   height: 60vh;
   background: url(../../Assets/aboutus.jpg);
   background-position: 100%;
   position: relative;
 }
-.hero_overlay_about_pg {
+.hero_overlay_products_pg {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -21,7 +21,7 @@
   );
   color: #fff;
 }
-.hero_overlay_about_pg h1 {
+.hero_overlay_products_pg h1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -30,24 +30,18 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
-.content_about_pg {
+.products_content_container {
   width: 100%;
+  height: 70vh;
+  background-color: #fff;
   padding: 50px 120px;
 }
-.content_about_pg_left {
-  width: 100%;
-  padding-top: 20px;
-}
-.content_about_pg_left p {
-  margin-top: 20px;
-  line-height: 30px;
-}
-.content_about_pg_right {
-  width: 100%;
+.products_content_container h1 {
   display: flex;
   justify-content: center;
 }
-.content_about_pg_right img {
-  width: 400px;
-  margin-top: 50px;
+.products_card_container {
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
 }

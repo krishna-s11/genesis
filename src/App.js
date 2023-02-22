@@ -8,6 +8,7 @@ import NewsMedia from "./Pages/NewsMedia/NewsMedia";
 import Products from "./Pages/Products/Products";
 import Projects from "./Pages/Projects/Projects";
 import Services from "./Pages/Services/Services";
+import GetInTouch from "./Pages/GetInTouch/GetInTouch";
 
 function App() {
   return (
@@ -21,9 +22,11 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/contact_us" element={<GetInTouch />} />
         </Routes>
       </div>
-      <Footer />
+      {!document.location.pathname.includes("contact_us") ? <Footer /> : ""}
+      {/* <Footer /> */}
     </div>
   );
 }

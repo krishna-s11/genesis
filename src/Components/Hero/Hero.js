@@ -12,7 +12,7 @@ const Hero = () => {
         <h1 id="welcome">Welcome to</h1>
         <h1 id="genesis">GENESIS ENERGY</h1>
         <p>
-          "Creating value through compehrensive solutions for energy sector"
+          "Creating value through comprehensive solutions for energy sector"
         </p>
         <p id="getintouch" onClick={getInTouch}>
           Get in Touch{" "}

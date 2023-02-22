@@ -40,9 +40,9 @@ const Navbar = () => {
         <Link to="/services">
           <li className="nav_items">Services</li>
         </Link>
-        <li className="nav_items" onClick={getInTouch}>
-          Get in touch
-        </li>
+        <Link to="/contact_us">
+          <li className="nav_items">Get in touch</li>
+        </Link>
       </ul>
     </div>
   );

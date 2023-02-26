@@ -4,18 +4,10 @@ import "./navbar.css";
 import logo from "../../Assets/logo.png";
 
 const Navbar = () => {
-  //   document.onscroll(function () {
-  //     var nav = document.getElementsByClassName("navbar");
-  //     console.log(nav);
-  //   });
   window.scroll(function () {
     var nav = document.getElementsByClassName("navbar");
     console.log(nav);
   });
-
-  const getInTouch = () => {
-    window.scrollTo(0, document.body.scrollHeight);
-  };
 
   return (
     <div className="navbar">

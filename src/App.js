@@ -9,6 +9,8 @@ import Products from "./Pages/Products/Products";
 import Projects from "./Pages/Projects/Projects";
 import Services from "./Pages/Services/Services";
 import GetInTouch from "./Pages/GetInTouch/GetInTouch";
+import SubCategories from "./Pages/SubCategories/SubCategories";
+import Product from "./Pages/Product/Product";
 
 function App() {
   return (
@@ -20,6 +22,11 @@ function App() {
           <Route path="/about_us" element={<About />} />
           <Route path="/news" element={<NewsMedia />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/:category" element={<SubCategories />} />
+          <Route
+            path="/products/:category/:sub_category"
+            element={<Product />}
+          />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact_us" element={<GetInTouch />} />

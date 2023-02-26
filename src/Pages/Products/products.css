@@ -44,4 +44,9 @@
   width: 100%;
   display: flex;
   margin-top: 40px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.products_pg a {
+  color: #000;
 }

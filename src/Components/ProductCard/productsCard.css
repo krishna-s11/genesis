@@ -4,6 +4,7 @@
   position: relative;
   margin-right: 20px;
   cursor: pointer;
+  margin-bottom: 100px;
 }
 .products_card img {
   width: 300px;

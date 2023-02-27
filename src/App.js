@@ -11,6 +11,8 @@ import Services from "./Pages/Services/Services";
 import GetInTouch from "./Pages/GetInTouch/GetInTouch";
 import SubCategories from "./Pages/SubCategories/SubCategories";
 import Product from "./Pages/Product/Product";
+import OurBrands from "./Components/OurBrands/OurBrands";
+import OurBrandsPG from "./Pages/OurBrands/OurBrands";
 
 function App() {
   return (
@@ -27,12 +29,13 @@ function App() {
             path="/products/:category/:sub_category"
             element={<Product />}
           />
+          <Route path="/our_brands" element={<OurBrandsPG />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact_us" element={<GetInTouch />} />
         </Routes>
       </div>
-      {!document.location.pathname.includes("contact_us") ? <Footer /> : ""}
+      {document.location.pathname.includes("contact_us") ? null : <Footer />}
       {/* <Footer /> */}
     </div>
   );

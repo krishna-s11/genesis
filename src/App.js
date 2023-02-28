@@ -29,6 +29,7 @@ function App() {
             path="/products/:category/:sub_category"
             element={<Product />}
           />
+          <Route path="brands/products/:brand" element={<Product />} />
           <Route path="/our_brands" element={<OurBrandsPG />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />

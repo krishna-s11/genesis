@@ -48,4 +48,5 @@
 .our_brands_container img {
   width: 100px;
   padding-bottom: 50px;
+  cursor: pointer;
 }

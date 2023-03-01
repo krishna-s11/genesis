@@ -59,7 +59,7 @@ const SubCategories = () => {
             categoryData?.name.slice(1)}
         </h1>
         <div className="products_card_container">
-          {emFlag ? (
+          {/* {emFlag ? (
             subCategory ? (
               subCategory.map((d) => {
                 return (
@@ -73,17 +73,22 @@ const SubCategories = () => {
             ) : (
               <p>Loading</p>
             )
-          ) : (
-            products?.map((d) => {
+          ) : ( */}
+          {products ? (
+            products.map((d) => {
               return (
                 <ProductCard
                   img={d.data.img}
                   title={d.data.name}
-                  url={`products/${category.category}`}
+                  // url={`product/${d.id}`}
+                  prodUrl={`/product/${d.id}`}
                 />
               );
             })
+          ) : (
+            <p>Loading...</p>
           )}
+          {/* )} */}
         </div>
       </div>
     </div>

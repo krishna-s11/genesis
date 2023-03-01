@@ -5,7 +5,7 @@ import "./productsCard.css";
 const ProductCard = (props) => {
   console.log(props);
   return (
-    <Link to={props.url}>
+    <Link to={props.prodUrl ? props.prodUrl : props.url}>
       <div className="products_card">
         <img src={props.img} alt="" srcset="" />
         <h3>{props.title.charAt(0).toUpperCase() + props.title.slice(1)}</h3>

@@ -13,6 +13,7 @@ import SubCategories from "./Pages/SubCategories/SubCategories";
 import Product from "./Pages/Product/Product";
 import OurBrands from "./Components/OurBrands/OurBrands";
 import OurBrandsPG from "./Pages/OurBrands/OurBrands";
+import ProductDetail from "./Pages/ProductDetail/ProductDetail";
 
 function App() {
   return (
@@ -25,12 +26,13 @@ function App() {
           <Route path="/news" element={<NewsMedia />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:category" element={<SubCategories />} />
-          <Route
+          {/* <Route
             path="/products/:category/:sub_category"
             element={<Product />}
-          />
+          /> */}
           <Route path="brands/products/:brand" element={<Product />} />
           <Route path="/our_brands" element={<OurBrandsPG />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact_us" element={<GetInTouch />} />

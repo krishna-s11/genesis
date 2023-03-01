@@ -8,7 +8,7 @@ const ProductCard = (props) => {
     <Link to={props.url}>
       <div className="products_card">
         <img src={props.img} alt="" srcset="" />
-        <h3>{props.title}</h3>
+        <h3>{props.title.charAt(0).toUpperCase() + props.title.slice(1)}</h3>
       </div>
     </Link>
   );

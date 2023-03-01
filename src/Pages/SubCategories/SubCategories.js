@@ -26,6 +26,7 @@ const SubCategories = () => {
     const sub_ref = collection(db, "sub_categories");
     const q = query(sub_ref, where("category", "==", category.category));
     const querySnapshot = await getDocs(q);
+    console.log(querySnapshot.docs);
     if (querySnapshot.empty) {
       setEmFlag(0);
       const prodRef = collection(db, "products");
@@ -53,7 +54,10 @@ const SubCategories = () => {
         </div>
       </div>
       <div className="products_content_container">
-        <h1>{categoryData?.name}</h1>
+        <h1>
+          {categoryData?.name.charAt(0).toUpperCase() +
+            categoryData?.name.slice(1)}
+        </h1>
         <div className="products_card_container">
           {emFlag ? (
             subCategory ? (

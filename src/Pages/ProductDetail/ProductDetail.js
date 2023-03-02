@@ -27,9 +27,20 @@ const ProductDetail = () => {
         <h1>{product?.name}</h1>
         <div style={{ display: "flex" }}>
           <div className="content_about_pg_left">
-            {product?.details?.map((d) => {
-              return <p>{d}</p>;
-            })}
+            {product ? (
+              product.details?.map((d) => {
+                return <p>{d}</p>;
+              })
+            ) : (
+              <p>Loading...</p>
+            )}
+            {/* {product ? (
+              product.details?.map((d) => {
+                return <p>{d}</p>;
+              })
+            ) : (
+              <p>Loading..</p>
+            )} */}
           </div>
           <div className="content_about_pg_right">
             <img src={product?.img} alt="" srcset="" />

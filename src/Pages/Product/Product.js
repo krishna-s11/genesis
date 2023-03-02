@@ -86,7 +86,8 @@ const Product = () => {
                 <ProductCard
                   img={d.data.img}
                   title={d.data.name}
-                  url={`products/${cat_id}/${sub_id}}`}
+                  // url={`products/${cat_id}/${sub_id}}`}
+                  prodUrl={`/product/${d.id}`}
                 />
               );
             })

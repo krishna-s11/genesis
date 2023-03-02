@@ -3,9 +3,9 @@
   align-items: center;
   height: 70vh;
   display: flex;
-  background: url(../../Assets/newsm.jpg);
+  background: url(../../Assets/hero.jpeg);
   background-size: 100%;
-  background-position-y: 60%;
+  background-position-y: 80%;
   padding: 0 120px;
   position: relative;
   color: #fff;

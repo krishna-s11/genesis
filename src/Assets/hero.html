@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://www.shapoorjipallonji.com/project/ICPR-Platform -->
+<html lang="en-US"><div id="twoseven-scripts" data-info="Scripts added by TwoSeven extension" style="display: none !important; position: static !important; top: 0px !important; left: 0px !important; width: 0px !important; height: 0px !important;"><script async="" src="./hero_files/clarity.js"></script><script type="text/javascript" async="" src="./hero_files/analytics.js"></script><script type="text/javascript" async="" src="./hero_files/js"></script><script async="" src="./hero_files/eysgagxb3w"></script><script type="text/javascript" id="__tmpScript-611045567" data-added-by-two-seven="1">(function() {
+        window.twoseven = window.twoseven || {};
+      })();</script><script type="text/javascript" id="__tmpScript-413901789" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForDOMNode = async function t(e,t=document){e=e||{};const{type:n,value:o}=e;if(!n||!o)throw new Error("Must specify identifier");let s=o;switch(n){case"tag":s=o.toUpperCase()}if("check"!==n){const e=await i({type:"selector",value:s},[],t);if(e)return new Promise(t=>t(e))}async function i({type:e,value:t},n,o){let s;switch(e){case"tag":s=n.find(e=>e.tagName===t);break;case"selector":s=o.querySelector(t);break;case"check":for(const e of n){if(await t(e))return e}}return s}return new Promise((e,o)=>{const r=new MutationObserver(async o=>{for(const a of o)if("childList"===a.type){const o=Array.from(a.addedNodes),w=await i({type:n,value:s},o,t);if(w)return r.disconnect(),e(w)}});r.observe(t,{childList:!0,subtree:!0})})};
+      })();</script><script type="text/javascript" id="__tmpScript-898871073" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.reportError = function n(e,t,n){"string"==typeof(n=n||{})&&(n={message:n});const{message:o,stack:s}=t;Object.assign(n,{tag:e,error:{message:o,stack:s}}),window.tsExtGetPostToParent()({name:name,tag:e,action:"report-error",json:n}),console.error(JSON.stringify(n.error))}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-929352925" data-added-by-two-seven="1">(function() {
+        
+    window.twosevenHmsToSecondsOnly = function(str) {
+        var p = str.split(':'),
+            s = 0, m = 1;
+
+        while (p.length > 0) {
+            s += m * parseInt(p.pop(), 10);
+            m *= 60;
+        }
+
+        return s;
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-548193160" data-added-by-two-seven="1">(function() {
+        window.twosevenExtLog = function(e,o,c){o||(o=e,e=void 0);let n=c||"black";if(c)switch(c){case"success":n="Green";break;case"info":n="DodgerBlue";break;case"error":n="Red";break;case"warning":n="Orange";break;default:n=c}e?console.log("%c"+e+": "+o,`color:${n}`):console.log("%c"+o,`color:${n}`)};
+      })();</script><script type="text/javascript" id="__tmpScript-347730066" data-added-by-two-seven="1">(function() {
+        
+    document.twosevenGET = function(url, callback) {
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+          if (xmlhttp.status == 200) {
+            callback(null, xmlhttp.responseText);
+          } else {
+            callback('something else other than 200 was returned', '');
+          }
+        }
+      };
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    };
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-768417128" data-added-by-two-seven="1">(function() {
+        
+    window.triggerEvent = function(e,t,n,o=!1){let s;o?(n&&"string"!=typeof n&&(n=JSON.stringify(n)),s=n):s={data:n},window.twosevenScriptsDiv&&n&&"object"==typeof n&&(console.warn(`WARNING: Attempting to send an object via event.detail from CS->Page does not work on Firefox: ${JSON.stringify(n)}`),console.error((new Error).stack));var i=new CustomEvent(t,{bubbles:!0,composed:!0,detail:s});e.dispatchEvent(i)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-19140314" data-added-by-two-seven="1">(function() {
+        window.twoseven.postTo = async function o(e,t,n=!1){let o;return t.name=t.name||name,o=n?new Promise(e=>{const n=`ack-${t.action}-${1e9*Math.random()|0}`;t.ack={event:n};window.debug&&["play","pause","currentTime"].some(e=>t.action.includes(e)),window.addEventListener("message",function t({data:o={}}){o.action===n&&(window.removeEventListener("message",t),e(o.json))})}):new Promise(e=>e()),e.postMessage(t,"*"),o};
+      })();</script><script type="text/javascript" id="__tmpScript-495793908" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostTo = function s(){return window.twoseven&&window.twoseven.postTo||window.postTo};
+      })();</script><script type="text/javascript" id="__tmpScript-50269778" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostToParent = function i(){return window.twoseven&&window.twoseven.postToParent||window.postToParent};
+      })();</script><script type="text/javascript" id="__tmpScript-227534089" data-added-by-two-seven="1">(function() {
+        window.twoseven.postResponse = async function r(e,t){const{source:n,data:{ack:{event:o}}}=e;window.tsExtGetPostTo()(n,{action:o,json:t})};
+      })();</script><script type="text/javascript" id="__tmpScript-829257116" data-added-by-two-seven="1">(function() {
+        window.postResponse = async function r(e,t){const{source:n,data:{ack:{event:o}}}=e;window.tsExtGetPostTo()(n,{action:o,json:t})};
+      })();</script><script type="text/javascript" id="__tmpScript-891314511" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToParent = async function a(e,t=!1){return window.tsExtGetPostTo()(window.parent,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-956706019" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToTop = async function w(e,t=!1){return window.tsExtGetPostTo()(window.top,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-424707351" data-added-by-two-seven="1">(function() {
+        window.postToTop = async function w(e,t=!1){return window.tsExtGetPostTo()(window.top,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-48811027" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.getFromStorage = e=>new Promise((t,n)=>{const o="get-from-storage-"+(1e9*Math.random()|0);window.addEventListener(o,e=>{window.removeEventListener(o,this);const{detail:{data:{value:n}}}=e;t(n)}),triggerEvent(window,"get-from-storage",{key:e,evt:o})})
+    window.twoseven.saveToStorage = e=>{triggerEvent(window,"save-to-storage",e)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-7349655" data-added-by-two-seven="1">(function() {
+        
+    window.attachHistoryListeners = function d(){var e=history.pushState;history.pushState=function(t,n,o){return"function"==typeof history.onpushstate&&history.onpushstate({state:t}),triggerEvent(window,"pushstate",{uri:o}),e.apply(history,arguments)};var t=history.replaceState;history.replaceState=function(e){return"function"==typeof history.onreplacestate&&history.onreplacestate({state:e}),t.apply(history,arguments)}}
+    window.attachHistoryListeners()
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-26882653" data-added-by-two-seven="1">(function() {
+        window.twoseven.once = function c(e,t,n){e.addEventListener(t,function o(s){e.removeEventListener(t,o),n(s)})};
+      })();</script><script type="text/javascript" id="__tmpScript-668997606" data-added-by-two-seven="1">(function() {
+        window.nextTick = function v(){return new Promise(e=>setTimeout(e,0))};
+      })();</script><script type="text/javascript" id="__tmpScript-530341764" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isOnTwoSevenTab = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'is-on-twoseven-tab' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-61802880" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isPaused = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'twoseven:pause-state' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-693061497" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForProp = function u(e,t,n){return new Promise(o=>{if(e[t])return void o();const s=setInterval(()=>{e[t]&&(clearInterval(s),o())},n)})};
+      })();</script><script type="text/javascript" id="__tmpScript-990363033" data-added-by-two-seven="1">(function() {
+        window.twoseven.overrideMethod = function p(e,t,n){const o=e[t].bind(e);e[t]=async function(...e){return await n(...e),o(...e)}};
+      })();</script><script type="text/javascript" id="__tmpScript-64847870" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoTimeUpdate = function g(e,t=3){return new Promise(n=>{let o=0;const s=()=>{++o===t&&(e.removeEventListener("timeupdate",s),n())};e.addEventListener("timeupdate",s)})};
+      })();</script><script type="text/javascript" id="__tmpScript-960127246" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoReadyState = function l(e,t,n=30){return t(e.readyState)?Promise.resolve():new Promise(o=>{const s=setInterval(()=>{t(e.readyState)&&(clearInterval(s),o())},n)})};
+      })();</script><script type="text/javascript" id="__tmpScript-479474857" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoToHaveFutureData = function m(e,...t){return window.twoseven.waitForVideoReadyState(e,e=>e>=3,...t)};
+      })();</script><script type="text/javascript" id="__tmpScript-61322564" data-added-by-two-seven="1">(function() {
+        window.twoseven = window.twoseven || {};
+      })();</script><script type="text/javascript" id="__tmpScript-762407695" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForDOMNode = async function t(e,t=document){e=e||{};const{type:n,value:o}=e;if(!n||!o)throw new Error("Must specify identifier");let s=o;switch(n){case"tag":s=o.toUpperCase()}if("check"!==n){const e=await i({type:"selector",value:s},[],t);if(e)return new Promise(t=>t(e))}async function i({type:e,value:t},n,o){let s;switch(e){case"tag":s=n.find(e=>e.tagName===t);break;case"selector":s=o.querySelector(t);break;case"check":for(const e of n){if(await t(e))return e}}return s}return new Promise((e,o)=>{const r=new MutationObserver(async o=>{for(const a of o)if("childList"===a.type){const o=Array.from(a.addedNodes),w=await i({type:n,value:s},o,t);if(w)return r.disconnect(),e(w)}});r.observe(t,{childList:!0,subtree:!0})})};
+      })();</script><script type="text/javascript" id="__tmpScript-128585091" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.reportError = function n(e,t,n){"string"==typeof(n=n||{})&&(n={message:n});const{message:o,stack:s}=t;Object.assign(n,{tag:e,error:{message:o,stack:s}}),window.tsExtGetPostToParent()({name:name,tag:e,action:"report-error",json:n}),console.error(JSON.stringify(n.error))}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-988982691" data-added-by-two-seven="1">(function() {
+        
+    window.twosevenHmsToSecondsOnly = function(str) {
+        var p = str.split(':'),
+            s = 0, m = 1;
+
+        while (p.length > 0) {
+            s += m * parseInt(p.pop(), 10);
+            m *= 60;
+        }
+
+        return s;
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-863974452" data-added-by-two-seven="1">(function() {
+        window.twosevenExtLog = function(e,o,c){o||(o=e,e=void 0);let n=c||"black";if(c)switch(c){case"success":n="Green";break;case"info":n="DodgerBlue";break;case"error":n="Red";break;case"warning":n="Orange";break;default:n=c}e?console.log("%c"+e+": "+o,`color:${n}`):console.log("%c"+o,`color:${n}`)};
+      })();</script><script type="text/javascript" id="__tmpScript-460182110" data-added-by-two-seven="1">(function() {
+        
+    document.twosevenGET = function(url, callback) {
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+          if (xmlhttp.status == 200) {
+            callback(null, xmlhttp.responseText);
+          } else {
+            callback('something else other than 200 was returned', '');
+          }
+        }
+      };
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    };
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-243507932" data-added-by-two-seven="1">(function() {
+        
+    window.triggerEvent = function(e,t,n,o=!1){let s;o?(n&&"string"!=typeof n&&(n=JSON.stringify(n)),s=n):s={data:n},window.twosevenScriptsDiv&&n&&"object"==typeof n&&(console.warn(`WARNING: Attempting to send an object via event.detail from CS->Page does not work on Firefox: ${JSON.stringify(n)}`),console.error((new Error).stack));var i=new CustomEvent(t,{bubbles:!0,composed:!0,detail:s});e.dispatchEvent(i)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-996660674" data-added-by-two-seven="1">(function() {
+        window.twoseven.postTo = async function o(e,t,n=!1){let o;return t.name=t.name||name,o=n?new Promise(e=>{const n=`ack-${t.action}-${1e9*Math.random()|0}`;t.ack={event:n};window.debug&&["play","pause","currentTime"].some(e=>t.action.includes(e)),window.addEventListener("message",function t({data:o={}}){o.action===n&&(window.removeEventListener("message",t),e(o.json))})}):new Promise(e=>e()),e.postMessage(t,"*"),o};
+      })();</script><script type="text/javascript" id="__tmpScript-948991918" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostTo = function s(){return window.twoseven&&window.twoseven.postTo||window.postTo};
+      })();</script><script type="text/javascript" id="__tmpScript-105743895" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostToParent = function i(){return window.twoseven&&window.twoseven.postToParent||window.postToParent};
+      })();</script><script type="text/javascript" id="__tmpScript-131635163" data-added-by-two-seven="1">(function() {
+        window.twoseven.postResponse = async function r(e,t){const{source:n,data:{ack:{event:o}}}=e;window.tsExtGetPostTo()(n,{action:o,json:t})};
+      })();</script><script type="text/javascript" id="__tmpScript-974191876" data-added-by-two-seven="1">(function() {
+        window.postResponse = async function r(e,t){const{source:n,data:{ack:{event:o}}}=e;window.tsExtGetPostTo()(n,{action:o,json:t})};
+      })();</script><script type="text/javascript" id="__tmpScript-663077645" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToParent = async function a(e,t=!1){return window.tsExtGetPostTo()(window.parent,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-218171406" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToTop = async function w(e,t=!1){return window.tsExtGetPostTo()(window.top,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-544672856" data-added-by-two-seven="1">(function() {
+        window.postToTop = async function w(e,t=!1){return window.tsExtGetPostTo()(window.top,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-989553243" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.getFromStorage = e=>new Promise((t,n)=>{const o="get-from-storage-"+(1e9*Math.random()|0);window.addEventListener(o,e=>{window.removeEventListener(o,this);const{detail:{data:{value:n}}}=e;t(n)}),triggerEvent(window,"get-from-storage",{key:e,evt:o})})
+    window.twoseven.saveToStorage = e=>{triggerEvent(window,"save-to-storage",e)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-954402507" data-added-by-two-seven="1">(function() {
+        
+    window.attachHistoryListeners = function d(){var e=history.pushState;history.pushState=function(t,n,o){return"function"==typeof history.onpushstate&&history.onpushstate({state:t}),triggerEvent(window,"pushstate",{uri:o}),e.apply(history,arguments)};var t=history.replaceState;history.replaceState=function(e){return"function"==typeof history.onreplacestate&&history.onreplacestate({state:e}),t.apply(history,arguments)}}
+    window.attachHistoryListeners()
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-13318066" data-added-by-two-seven="1">(function() {
+        window.twoseven.once = function c(e,t,n){e.addEventListener(t,function o(s){e.removeEventListener(t,o),n(s)})};
+      })();</script><script type="text/javascript" id="__tmpScript-789770750" data-added-by-two-seven="1">(function() {
+        window.nextTick = function v(){return new Promise(e=>setTimeout(e,0))};
+      })();</script><script type="text/javascript" id="__tmpScript-118376116" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isOnTwoSevenTab = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'is-on-twoseven-tab' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-903112554" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isPaused = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'twoseven:pause-state' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-758363274" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForProp = function u(e,t,n){return new Promise(o=>{if(e[t])return void o();const s=setInterval(()=>{e[t]&&(clearInterval(s),o())},n)})};
+      })();</script><script type="text/javascript" id="__tmpScript-863226291" data-added-by-two-seven="1">(function() {
+        window.twoseven.overrideMethod = function p(e,t,n){const o=e[t].bind(e);e[t]=async function(...e){return await n(...e),o(...e)}};
+      })();</script><script type="text/javascript" id="__tmpScript-821375346" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoTimeUpdate = function g(e,t=3){return new Promise(n=>{let o=0;const s=()=>{++o===t&&(e.removeEventListener("timeupdate",s),n())};e.addEventListener("timeupdate",s)})};
+      })();</script><script type="text/javascript" id="__tmpScript-665995197" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoReadyState = function l(e,t,n=30){return t(e.readyState)?Promise.resolve():new Promise(o=>{const s=setInterval(()=>{t(e.readyState)&&(clearInterval(s),o())},n)})};
+      })();</script><script type="text/javascript" id="__tmpScript-934221695" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForVideoToHaveFutureData = function m(e,...t){return window.twoseven.waitForVideoReadyState(e,e=>e>=3,...t)};
+      })();</script><script type="text/javascript" id="__tmpScript-484192638" data-added-by-two-seven="1">(function() {
+        
+      const modal = document.querySelector('.twoseven-ext-tab-media-modal')
+      const modalCloseBtn = modal.querySelector('.close')
+      function closeModal () {
+        modal.style.display = 'none'
+        const frame = document.querySelector('#twoseven-ext-tab-media-iframe').contentWindow
+        frame.postMessage({
+          __evt_name: 'modal-hide'
+        }, '*')
+      }
+      modalCloseBtn.onclick = closeModal
+
+      window.onmessage = function (e) {
+        if (e.data.__evt_name === 'modal-hide') {
+          closeModal()
+        }
+      }
+
+      window.twoseven.closeTabMediaModal = closeModal
+
+      window.onclick = function (e) {
+        if (e.target.id === 'twoseven-ext-tab-media-modal' && modal.style.display === 'block') {
+            closeModal()
+        }
+      }
+    ;
+      })();</script></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!--<base id="baseurl" href="https://www.shapoorjipallonji.com/">--><base href=".">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="canonical" href="https://www.shapoorjipallonji.com/project/ICPR-Platform">
+  <meta name="robots" content="" "index,="" follow"="">
+      <title>ICPR Process Platform for ONGC in Mumbai | Afcons Infrastructure Projects</title>
+    <meta name="description" content="Afcons engineered and constructed the ICPR Process Platform for ONGC in Mumbai. A four-legged offshore Oil &amp; Gas process platform was delivered in EPC capacity, along with Indonesian JV partner Gunanusa. It involved engineering, procurement, fabrication, load out, installing hook up, and commissioning.">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="preload" href="https://www.shapoorjipallonji.com/assets/fonts/Graphik-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="https://www.shapoorjipallonji.com/assets/fonts/Graphik-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="apple-touch-icon" sizes="57x57" href="https://www.shapoorjipallonji.com/assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.shapoorjipallonji.com/assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://www.shapoorjipallonji.com/assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www.shapoorjipallonji.com/assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.shapoorjipallonji.com/assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://www.shapoorjipallonji.com/assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.shapoorjipallonji.com/assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://www.shapoorjipallonji.com/assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.shapoorjipallonji.com/assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="https://www.shapoorjipallonji.com/assets/favicon/manifest.json">
+  <link rel="stylesheet" href="./hero_files/base.css">
+  <link rel="stylesheet" href="./hero_files/buttons.css">
+  <link rel="stylesheet" href="./hero_files/header.css">
+  <link rel="stylesheet" href="./hero_files/footer.css">
+  <link rel="stylesheet" href="./hero_files/slider.css">
+  <link rel="stylesheet" href="./hero_files/projects.css">
+  		<script type="application/ld+json"> 
+		{ 
+		"@context": "https://schema.org", 
+		"@type": "Article", 
+		"headline": "ICPR Platform", 
+		"image": "https://www.shapoorjipallonji.com/assets/Desktop/Projects/640x640/ICPR-platform-640x640.jpg", 
+		"author": 
+		{ 
+			"@type": "NewsArticle", 
+			"name": "Shapoorji Pallonji Company Private Limited" 
+		}, 
+		"publisher": 
+		{ 
+			"@type": "Organization", 
+			"name": "Shapoorji Pallonji Company Private Limited", 
+			"logo": "https://www.shapoorjipallonji.com/assets/vectors/icons/icon_splogo_blue.svg"
+		}, 
+		"datePublished": "2020-01-09" 
+		} 
+		</script>
+    <link rel="stylesheet" href="./hero_files/project.css">
+<!-- <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      (i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments);
+      }),
+      (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-105676265-1', 'auto');
+    ga('send', 'pageview');
+  </script> -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./hero_files/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-105676265-1');
+</script>
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "eysgagxb3w");
+</script>
+<link href="chrome-extension://cjdnfmjmdligcpfcekfmenlhiopehjkd/web_resources/modal/modal.css" rel="stylesheet" id="__tmpStyle"></head>
+
+<body style="opacity: 1;" data-new-gr-c-s-check-loaded="14.1098.0" data-gr-ext-installed="" class="vsc-initialized">
+  <div id="page">
+<div id="black_overlay"></div>
+<header id="component__header">
+  <!-- Search Section  -->
+  <div id="search_text_box">
+    <div class="grid__container__fixed">
+      <div class="grid__row">
+        <div class="grid__col grid__12col">
+          <div class="search_section">
+            <input autocomplete="off" id="search-input" type="text" name="search" placeholder="Search" onkeyup="onSearchInputChange(event)">
+            <a href="javascript:void(0);" id="close_search">
+              <img width="13" src="./hero_files/icon_close_search.svg" class="desktop">
+              <img src="./hero_files/icon_close.svg" class="mobile">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="search-suggestions">
+    <div class="grid__container__fixed">
+      <div class="grid__row">
+        <div class="grid__col grid__12col" id="search_list">
+                    <!--<p class="search-suggestion"><span class="search-word">Sterling</span> & Wilson in <span class="search-category">News</span></p>
+                    <p class="search-suggestion"><span class="search-word">Sterling</span> & Wilson in <span class="search-category">Awards</span></p>
+                    <p class="search-suggestion">Karapan Armada <span class="search-word">Sterling</span> III in <span class="search-category">Projects</span></p>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Search Section  -->
+            <!-- Nav Items  -->
+            <div class="header-container">
+              <div class="grid__container__fixed">
+                <div class="grid__row">
+                  <div class="grid__col grid__12col header-options">
+                    <a href="https://www.shapoorjipallonji.com/">
+                      <img alt="" width="180" class="logo-icon" src="./hero_files/icon_splogo_blue.svg">
+                    </a>
+                    <div class="nav-items">
+                      <a href="https://www.shapoorjipallonji.com/about/">
+                        <p class="nav-item about active">ABOUT</p>
+                      </a>
+                      <a href="https://www.shapoorjipallonji.com/people/team">
+                        <p class="nav-item people">BOARD</p>
+                      </a>
+                      <a href="javascript:;" class="dropdown_menu_wrapper">
+                        <p class="nav-item business-inside">BUSINESSES</p>
+                      </a>
+                      <div id="dropdown_sub_menu" class="businesses hidden" onclick="event.stopPropagation();" style="height: 0px;">
+                        <div class="dropdown_sub_menu_wrapper">
+                          <div class="grid__container__fixed">
+                                                            <div class="grid__row">
+                                                                      <div class="grid__col grid__3col">
+                                      <p class="subMenu_paragraph">
+                                        A global diversified organization delivering challenging projects <br>in 40+ countries for over 157 years.
+                                        <!-- India's leading business<br />conglomerate with clients in 50+<br />countries, delivering challenging<br />projects for over 150 years. -->
+                                      </p>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/business/EngineeringAndConstruction" class="subMenu_link">
+                                        Engineering &amp; Construction                                        <span>
+                                          Iconic civil and structural<br>engineering landmarks                                           <img src="./hero_files/icon_rightarrow_gray.svg">
+                                        </span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/business/Energy" class="subMenu_link">
+                                        Energy                                        <span>
+                                          Solutions for energy resources<br>and green power                                          <img src="./hero_files/icon_rightarrow_gray.svg">
+                                        </span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/business/Water" class="subMenu_link">
+                                        Water                                        <span>Water and waste<br>management treatment<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                    </div>
+                                                                <div class="grid__row">
+                                                                      <div class="grid__col grid__3col"></div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/business/Infrastructure" class="subMenu_link">
+                                        Infrastructure                                        <span>
+                                          Infrastructure assets in transportation,<br>natural resources and power                                          <img src="./hero_files/icon_rightarrow_gray.svg">
+                                        </span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/business/RealEstate" class="subMenu_link">
+                                        Real Estate                                        <span>
+                                          Purposeful spaces<br>optimize life                                          <img src="./hero_files/icon_rightarrow_gray.svg">
+                                        </span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/business/FinancialServices" class="subMenu_link">
+                                        Financial Services                                         <span>Innovative structured<br>finance solutions<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                    </div>
+                                                          </div>
+                        </div>
+                      </div>
+                      <a href="javascript:;" class="dropdown_menu_wrapper">
+                        <p class="nav-item company-inside">COMPANIES</p>
+                      </a>
+                      <div id="dropdown_sub_menu" class="companies hidden" onclick="event.stopPropagation();">
+                        <div class="dropdown_sub_menu_wrapper">
+                          <div class="grid__container__fixed">
+
+                                                            <div class="grid__row">
+                                                                      <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/SPEngineeringAndConstruction" class="subMenu_link">
+                                        SP Engineering &amp; Construction                                        <span>Engineering megastructures<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/SPEngineeringProcurementAndConstruction" class="subMenu_link">
+                                        SP Engineering, Procurement <br>&amp; Construction                                        <span>Powering end-to-end turnkey solutions<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/SPFinance" class="subMenu_link">
+                                        Shapoorji Pallonji Finance                                        <span>Corporate financing solutions
+<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/SPInfrastructure" class="subMenu_link">
+                                        SP Infrastructure                                        <span>Developing sustainable infrastructure <br>assets<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                    </div>
+                                                                <div class="grid__row">
+                                                                      <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/SPInternational" class="subMenu_link">
+                                        SP International                                         <span>Constructing iconic landmarks
+<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/SPInvestmentAdvisors" class="subMenu_link">
+                                        SP Investment Advisors                                        <span>Real estate sector and<br> investment advisory 
+<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/SPOilAndGas" class="subMenu_link">
+                                        SP Oil &amp; Gas                                        <span>Providing cutting-edge floating technologies
+<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/SPRealEstate" class="subMenu_link">
+                                        SP Real Estate                                        <span>Enriching spaces<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                    </div>
+                                                                <div class="grid__row">
+                                                                      <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/AfconsInfrastructure" class="subMenu_link">
+                                        Afcons Infrastructure                                        <span>Infrastructure development
+<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/ForbesAndCo" class="subMenu_link">
+                                        Forbes &amp; Co.                                        <span>Engineering, manufacturing and<br> logistics solutions 
+<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/ForvolInternationalServices" class="subMenu_link">
+                                        Forvol International Services                                        <span>Travel and leisure services
+<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/SterlingAndWilson" class="subMenu_link">
+                                        Sterling &amp; Wilson                                        <span>MEP and EPC Business
+<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                    </div>
+                                                                <div class="grid__row">
+                                                                      <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/SDCorporation" class="subMenu_link">
+                                        SD Corporation                                        <span>Redeveloping communities<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/OmanShapoorjiCo" class="subMenu_link">
+                                        Oman Shapoorji Co.                                        <span>Building landmarks in Oman<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                        <div class="grid__col grid__3col">
+                                      <a href="https://www.shapoorjipallonji.com/company/NextGenPublishing" class="subMenu_link">
+                                        NextGen Publishing                                        <span>Redefining magazine publishing
+<img src="./hero_files/icon_rightarrow_gray.svg"></span>
+                                      </a>
+                                    </div>
+                                                                    </div>
+                                
+
+                          </div>
+
+                        </div>
+                      </div>
+
+                      <a href="https://www.shapoorjipallonji.com/timeline">
+                        <p class="nav-item timeline">TIMELINE</p>
+                      </a>
+                      <a href="https://www.shapoorjipallonji.com/Media/Press-Releases">
+                        <p class="nav-item media">MEDIA</p>
+                      </a>
+                      <a href="https://www.shapoorjipallonji.com/Impact/CSR">
+                        <p class="nav-item impact">IMPACT</p>
+                      </a>
+                      <a href="https://www.shapoorjipallonji.com/contacts">
+                        <p class="nav-item contact">CONTACT</p>
+                      </a>
+                    </div>
+                    <div id="search">
+                      <a id="search_click" href="javascript:void(0);">
+                        <img alt="" width="16" height="16" class="black-search-icon" src="./hero_files/icon_search.svg">
+                        <img alt="" width="16" height="16" class="blue-search-icon" src="./hero_files/icon_search_blue.svg">
+                      </a>
+                    </div>
+                    <img alt="" width="20" onclick="openMenu();" class="menu-icon" src="./hero_files/icon_menu_blue.svg">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </header>
+ <main id="main">
+    <div id="project-inside-container">
+        <div id="project-header">
+            <div class="project-header-container">
+                <div class="grid__container__fixed">
+                    <div class="grid__row">
+                        <div class="grid__col grid__12col">
+                            <div class="link__back-to-timeline">
+                                <img src="./hero_files/icon_back_desktop.svg">
+                                <a href="https://www.shapoorjipallonji.com/timeline">
+                                    <p>BACK</p>
+                                </a>
+                            </div>
+                            <div class="project-nav">  <div class="project-previous-nav" data-href="project/Oil-Jetty">
+                                    <p><a href="https://www.shapoorjipallonji.com/project/Oil-Jetty">previous</a></p>
+                                </div>   <div class="project-next-nav" data-href="project/HRD-Platform">
+                                    <p><a href="https://www.shapoorjipallonji.com/project/HRD-Platform">next</a></p>
+                                </div>  </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slider__project-images" class="slider">  <div class="slides-outer-wrapper">
+                <div class="slides-inner-wrapper">  <div data-slide-index="0" class="slide">
+                        <div class="slide-content">
+                            <div title="ICPR Platform, Mumbai, 2013" aria-label="ICPR Platform Mumbai, 2013" class="slide-image" data-image="" data-desktop-src="https://www.shapoorjipallonji.com//assets/Desktop/Projects/1440x490/ICPR-platform-1440x490.jpg" data-mobile-src="https://www.shapoorjipallonji.com//assets/Mobile/Projects/640x550/ICPR-platform-640x550.jpg" data-src="https://www.shapoorjipallonji.com//assets/Desktop/Projects/1440x490/ICPR-platform-1440x490.jpg" style="transition: opacity 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; opacity: 1; background-image: url(&quot;https://www.shapoorjipallonji.com//assets/Desktop/Projects/1440x490/ICPR-platform-1440x490.jpg&quot;);" data-animated="true"></div>
+                        </div>
+                    </div>  </div>
+            </div>
+            <div class="carousel-dots show">  </div>
+        </div>
+        <div id="project-details">
+            <div class="grid__container__fixed">
+                <div class="grid__row">
+                    <div class="grid__col grid__4col pr__1col__lg grid__12col__sm">
+                        <h1 class="project-name"> ICPR Platform </h1> <p class="project-location-and-date"> Mumbai, 2013 </p>                     </div>
+                    <div class="grid__col grid__5col pr__1col__lg grid__12col__sm">
+                        <p class="about-project"> A four-legged offshore Oil &amp; Gas process platform was delivered in EPC capacity, along with Indonesian JV partner Gunanusa. It involved engineering, procurement, fabrication, load out, installing hook up and commissioning. </p>
+                    </div>
+                    <div class="grid__col grid__3col grid__12col__sm businesses-and-companies-involved">  <h2>BUSINESSES INVOLVED</h2>
+                        <div class="component__businesses-involved">  <a class="component__business-link" href="https://www.shapoorjipallonji.com/business/Energy">
+                                <div>
+                                    <p> Energy </p>
+                                    <img alt="" class="arrow-icon" src="./hero_files/icon_rightarrow_blue.svg">
+                                </div>
+                            </a>  </div>  <h2>COMPANIES INVOLVED</h2>
+                        <div class="component__companies-involved">  <a class="component__company-link" href="https://www.shapoorjipallonji.com/company/AfconsInfrastructure">
+                                <div>
+                                    <p> Afcons Infrastructure </p>
+                                    <img alt="" class="arrow-icon" src="./hero_files/icon_rightarrow_blue.svg">
+                                </div>
+                            </a>  </div>                     </div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:history.back();">
+            <div class="component__back-button">
+                <img class="arrow-icon" width="8" src="./hero_files/icon_back.svg">
+                <p>BACK</p>
+            </div>
+        </a>
+    </div>
+</main>
+<footer id="component__footer">
+    <div class="grid__container__fixed">
+        <div class="grid__row map-section">
+            <div class="grid__col grid__12col">
+                <p class="map-heading">Trusted legacy of engineering excellence</p>
+                <img width="520" class="map-image" data-image="" data-desktop-src="assets/vectors/illustrations/footer-map.svg" data-src="assets/vectors/illustrations/footer-map.svg" style="transition: opacity 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; opacity: 1;" src="./hero_files/footer-map.svg" data-animated="true">
+            </div>
+        </div>
+        <div class="grid__row businesses-section">
+            <div class="grid__col grid__12col">
+                <p class="section-name">BUSINESSES</p>
+            </div>
+        </div>
+        <div class="grid__row businesses-list">
+                                <a href="https://www.shapoorjipallonji.com/business/EngineeringAndConstruction" class="sitemap-link grid__col grid__2col grid__6col__sm">
+                        <p>Engineering &amp; Construction</p>
+                    </a>
+                                <a href="https://www.shapoorjipallonji.com/business/Energy" class="sitemap-link grid__col grid__2col grid__6col__sm">
+                        <p>Energy</p>
+                    </a>
+                                <a href="https://www.shapoorjipallonji.com/business/Water" class="sitemap-link grid__col grid__2col grid__6col__sm">
+                        <p>Water</p>
+                    </a>
+                                <a href="https://www.shapoorjipallonji.com/business/Infrastructure" class="sitemap-link grid__col grid__2col grid__6col__sm">
+                        <p>Infrastructure</p>
+                    </a>
+                                <a href="https://www.shapoorjipallonji.com/business/RealEstate" class="sitemap-link grid__col grid__2col grid__6col__sm">
+                        <p>Real Estate</p>
+                    </a>
+                                <a href="https://www.shapoorjipallonji.com/business/FinancialServices" class="sitemap-link grid__col grid__2col grid__6col__sm">
+                        <p>Financial Services </p>
+                    </a>
+                    </div>
+        <div class="grid__row companies-section">
+            <div class="grid__col grid__12col">
+                <p class="section-name">GROUP COMPANIES</p>
+            </div>
+        </div>
+                <div class="grid__row companies-list">
+            <div class="grid__col grid__4col grid__6col__sm"><div class="grid__row no-gutter"><div class="grid__col grid__6col grid__12col__sm"><a href="https://www.shapoorjipallonji.com/company/SPEngineeringAndConstruction" class="sitemap-link"><p>SP Engineering &amp; Construction</p></a><a href="https://www.shapoorjipallonji.com/company/SPEngineeringProcurementAndConstruction" class="sitemap-link"><p>SP Engineering, Procurement <br>&amp; Construction</p></a><a href="https://www.shapoorjipallonji.com/company/SPFinance" class="sitemap-link"><p>Shapoorji Pallonji Finance</p></a><a href="https://www.shapoorjipallonji.com/company/SPInfrastructure" class="sitemap-link"><p>SP Infrastructure</p></a></div><div class="grid__col grid__6col grid__12col__sm"><a href="https://www.shapoorjipallonji.com/company/SPInternational" class="sitemap-link"><p>SP International </p></a><a href="https://www.shapoorjipallonji.com/company/SPInvestmentAdvisors" class="sitemap-link"><p>SP Investment Advisors</p></a><a href="https://www.shapoorjipallonji.com/company/SPOilAndGas" class="sitemap-link"><p>SP Oil &amp; Gas</p></a><a href="https://www.shapoorjipallonji.com/company/SPRealEstate" class="sitemap-link"><p>SP Real Estate</p></a></div></div></div><div class="grid__col grid__4col grid__6col__sm"><div class="grid__row no-gutter"><div class="grid__col grid__6col grid__12col__sm"><a href="https://www.shapoorjipallonji.com/company/AfconsInfrastructure" class="sitemap-link"><p>Afcons Infrastructure</p></a><a href="https://www.shapoorjipallonji.com/company/ForbesAndCo" class="sitemap-link"><p>Forbes &amp; Co.</p></a><a href="https://www.shapoorjipallonji.com/company/ForvolInternationalServices" class="sitemap-link"><p>Forvol International Services</p></a><a href="https://www.shapoorjipallonji.com/company/SterlingAndWilson" class="sitemap-link"><p>Sterling &amp; Wilson</p></a></div><div class="grid__col grid__6col grid__12col__sm"><a href="https://www.shapoorjipallonji.com/company/SDCorporation" class="sitemap-link"><p>SD Corporation</p></a><a href="https://www.shapoorjipallonji.com/company/OmanShapoorjiCo" class="sitemap-link"><p>Oman Shapoorji Co.</p></a><a href="https://www.shapoorjipallonji.com/company/NextGenPublishing" class="sitemap-link"><p>NextGen Publishing</p></a></div></div></div>        </div>
+        <div class="grid__row">
+            <div class="grid__col grid__7col grid__12col__sm">
+                <p class="copyright">©&nbsp;<span class="footer-year">2023</span> SHAPOORJI PALLONJI | <a href="https://shapoorjipallonji.com/pdfs/Disclaimer.pdf">DISCLAIMER</a> | <a href="https://shapoorjipallonji.com/pdfs/TermsAndConditions.pdf" target="_blank">TERMS &amp; CONDITIONS</a> | <a href="https://www.shapoorjipallonji.com/contacts/">CONTACT</a></p>
+            </div>
+        </div>
+        <div class="grid__row">
+            <div class="grid__col grid__7col grid__12col__sm">
+                <p class="note">
+                    Shapoorji Pallonji And Company Private Limited established in 1865 in India is a global, diversified institution with a leading presence in the sectors of Engineering &amp; Construction, Infrastructure, Real Estate, Water, Energy and Financial Services. A strong 40,000 people employee base delivers end-to-end solutions across 40 nations. We build megastructures, develop multifaceted iconic landmarks, drive innovative technologies in water management, renewable energy, oil &amp; gas and power, with a focus on good governance and sustainable development, to engineer a better planet.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+<div id="mobile-menu">
+    <div class="primary-menu">
+        <img alt="" onclick="closeMenu()" class="close-icon" src="./hero_files/icon_close.svg">
+        <a href="https://www.shapoorjipallonji.com/about/">
+            <p class="menu-item">ABOUT</p>
+        </a>
+        <a href="https://www.shapoorjipallonji.com/people/team">
+            <p class="menu-item">BOARD</p>
+        </a>
+        <p class="menu-item" onclick="openSecondaryMenu(&#39;#businesses-menu&#39;);">BUSINESSES
+            <img alt="" class="arrow-icon" src="./hero_files/icon_rightarrow_blue.svg">
+        </p>
+        <p class="menu-item" onclick="openSecondaryMenu(&#39;#companies-menu&#39;);">COMPANIES
+            <img alt="" class="arrow-icon" src="./hero_files/icon_rightarrow_blue.svg">
+        </p>
+        <a href="https://www.shapoorjipallonji.com/timeline/">
+            <p class="menu-item">TIMELINE</p>
+        </a>
+        <a href="https://www.shapoorjipallonji.com/Media/Press-Releases/">
+            <p class="menu-item">MEDIA</p>
+        </a>
+        <a href="https://www.shapoorjipallonji.com/Impact/CSR">
+            <p class="menu-item">IMPACT</p>
+        </a>
+        <a href="https://www.shapoorjipallonji.com/contacts">
+            <p class="menu-item">CONTACT</p>
+        </a>
+    </div>
+    <div id="businesses-menu" class="secondary-menu">
+        <p class="back" onclick="closeSecondaryMenu(event)">
+            <img alt="" class="arrow-icon" src="./hero_files/icon_rightarrow_blue.svg">businesses</p>
+        <img alt="" class="close-icon" src="./hero_files/icon_close.svg" onclick="closeSecondaryMenu(event)">
+                        <a href="https://www.shapoorjipallonji.com/business/EngineeringAndConstruction" class="menu-item">
+                    <p>Engineering &amp; Construction</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/business/Infrastructure" class="menu-item">
+                    <p>Infrastructure</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/business/Energy" class="menu-item">
+                    <p>Energy</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/business/RealEstate" class="menu-item">
+                    <p>Real Estate</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/business/Water" class="menu-item">
+                    <p>Water</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/business/FinancialServices" class="menu-item">
+                    <p>Financial Services </p>
+                </a>
+            </div>
+    <div id="companies-menu" class="secondary-menu">
+        <p class="back" onclick="closeSecondaryMenu(event)">
+            <img alt="" class="arrow-icon" src="./hero_files/icon_rightarrow_blue.svg">Companies</p>
+        <img alt="" class="close-icon" src="./hero_files/icon_close.svg" onclick="closeSecondaryMenu(event)">
+                        <a href="https://www.shapoorjipallonji.com/company/SPEngineeringAndConstruction" class="menu-item">
+                    <p>SP Engineering &amp; Construction</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/SPEngineeringProcurementAndConstruction" class="menu-item">
+                    <p>SP Engineering, Procurement <br>&amp; Construction</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/SPFinance" class="menu-item">
+                    <p>Shapoorji Pallonji Finance</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/SPInfrastructure" class="menu-item">
+                    <p>SP Infrastructure</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/SPInternational" class="menu-item">
+                    <p>SP International </p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/SPInvestmentAdvisors" class="menu-item">
+                    <p>SP Investment Advisors</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/SPOilAndGas" class="menu-item">
+                    <p>SP Oil &amp; Gas</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/SPRealEstate" class="menu-item">
+                    <p>SP Real Estate</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/AfconsInfrastructure" class="menu-item">
+                    <p>Afcons Infrastructure</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/ForbesAndCo" class="menu-item">
+                    <p>Forbes &amp; Co.</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/ForvolInternationalServices" class="menu-item">
+                    <p>Forvol International Services</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/SterlingAndWilson" class="menu-item">
+                    <p>Sterling &amp; Wilson</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/SDCorporation" class="menu-item">
+                    <p>SD Corporation</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/OmanShapoorjiCo" class="menu-item">
+                    <p>Oman Shapoorji Co.</p>
+                </a>
+                        <a href="https://www.shapoorjipallonji.com/company/NextGenPublishing" class="menu-item">
+                    <p>NextGen Publishing</p>
+                </a>
+            </div>
+</div>
+<script>
+    document.body.style.opacity = "1";
+</script>
+<script src="./hero_files/TweenMax.min.js"></script>
+<script src="./hero_files/lodash.min.js"></script>
+<script src="./hero_files/helpers.js"></script>
+<script src="./hero_files/JSImageLoader.js"></script>
+<script src="./hero_files/JSSlider.js"></script>
+    <script src="./hero_files/project.js"></script>
+
+
+
+<div>
+    <div id="twoseven-ext-tab-media-modal" class="twoseven-ext-tab-media-modal" style="display: none;">
+      <!-- Modal content -->
+      <div class="twoseven-ext-tab-media-modal-content">
+        <div class="iframe-container" style="height: 100%; width: 100%;">
+          <span class="close">×</span>
+        </div>
+      </div>
+    </div></div><div id="torrent-scanner-popup" style="display: none;"></div><gdiv class="ginger-extension-writer" style="display: none;"><gdiv class="ginger-extension-writer-frame"><iframe src="./hero_files/index.html"></iframe></gdiv></gdiv></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

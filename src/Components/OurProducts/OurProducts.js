@@ -9,6 +9,7 @@ import pipe_fittings from "../../Assets/pipe_fittings.jpeg";
 import oil_gas from "../../Assets/oil_gas.png";
 import cathodic_protection from "../../Assets/cathodic_protection.jpeg";
 import junction from "../../Assets/junction.jpeg";
+import pattern from "../../Assets/backPattern.svg";
 
 const OurProducts = () => {
   var settings = {
@@ -50,6 +51,7 @@ const OurProducts = () => {
   };
   return (
     <div className="our_products_home">
+      {/* <img src={pattern} alt="" srcset="" id="our_product_background" /> */}
       <h1>Our Products</h1>
       <Slider {...settings} className="what_we_do_carousel">
         <div className="what_we_do_carousel_container">

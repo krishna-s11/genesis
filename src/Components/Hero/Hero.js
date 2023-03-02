@@ -8,16 +8,18 @@ const Hero = () => {
   };
   return (
     <div className="hero">
-      <div className="hero_left">
-        <h1 id="welcome">Welcome to</h1>
-        <h1 id="genesis">GENESIS ENERGY</h1>
-        <p>
-          "Creating value through comprehensive solutions for energy sector"
-        </p>
-        <p id="getintouch" onClick={getInTouch}>
-          Get in Touch{" "}
-          <BsArrowRightCircle style={{ transform: "translate(3px,2.5px)" }} />
-        </p>
+      <div className="opacity_film">
+        <div className="hero_left">
+          <h1 id="welcome">Welcome to</h1>
+          <h1 id="genesis">GENESIS ENERGY</h1>
+          <p style={{ marginTop: "20px", letterSpacing: "2px" }}>
+            "Creating value through comprehensive solutions for energy sector"
+          </p>
+          <p id="getintouch" onClick={getInTouch}>
+            Get in Touch{" "}
+            <BsArrowRightCircle style={{ transform: "translate(3px,2.5px)" }} />
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -3,13 +3,16 @@
   align-items: center;
   height: 70vh;
   display: flex;
-  background: url(../../Assets/background.png);
+  background: url(../../Assets/aboutus.jpg);
   background-size: 100%;
   background-position-y: 30%;
   padding: 0 120px;
+  position: relative;
+  color: #fff;
 }
 .hero_left {
   width: 420px;
+  text-align: center;
 }
 .hero_left h1 {
   margin-bottom: 10px;
@@ -21,10 +24,13 @@
 #genesis {
   font-size: 52px;
 }
-.hero_left p {
+.hero_left p:first-child {
   line-height: 20px;
-  font-weight: 700;
+  /* font-weight: 700; */
   margin-top: 20px;
+  z-index: 1;
+  text-align: center;
+  letter-spacing: 2px;
 }
 .hero_left a {
   text-decoration: none;
@@ -34,4 +40,16 @@
 #getintouch {
   margin-top: 50px;
   cursor: pointer;
+}
+.opacity_film {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

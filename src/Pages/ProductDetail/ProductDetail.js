@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import "./productDetail.css";
 import { db } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
+import ScrollALittle from "../../Utility/ScrollALittle";
 
 const ProductDetail = () => {
   const id = useParams();
@@ -18,6 +19,7 @@ const ProductDetail = () => {
   console.log(product);
   return (
     <div className="product_detail_pg">
+      <ScrollALittle />
       <div className="hero_about_pg">
         <div className="hero_overlay_about_pg">
           <h1>Genesis Energy</h1>

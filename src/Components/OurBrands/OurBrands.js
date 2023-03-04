@@ -8,6 +8,7 @@ import anggerik from "../../Assets/anggerik_logo.png";
 import honeywell from "../../Assets/honeywell_logo.png";
 import tristar from "../../Assets/tristar_logo.png";
 import appleton from "../../Assets/appleton_logo.png";
+import { Link } from "react-router-dom";
 
 const OurBrands = () => {
   var settings = {
@@ -52,39 +53,47 @@ const OurBrands = () => {
       <h1>Our Brands</h1>
       <Slider {...settings} className="our_customer_slider">
         <div>
-          <img
-            id="arflu"
-            src={arflu}
-            className="bharat_img"
-            alt="Bharat Petroleum"
-            srcset=""
-          />
+          <Link to="brands/products/arflu">
+            <img
+              id="arflu"
+              src={arflu}
+              className="bharat_img"
+              alt="Bharat Petroleum"
+              srcset=""
+            />
+          </Link>
         </div>
         <div>
-          <img
-            src={anggerik}
-            className="indian_oil_img"
-            alt="Indian Oil"
-            srcset=""
-          />
+          <Link to="/brands/products/anggerik_laksana">
+            <img
+              src={anggerik}
+              className="indian_oil_img"
+              alt="Indian Oil"
+              srcset=""
+            />
+          </Link>
         </div>
         <div>
-          <img
-            src={honeywell}
-            className="ntpc_img"
-            alt="NTPC"
-            id="honeywell"
-            srcset=""
-          />
+          <Link to="/brands/products/honeywell">
+            <img
+              src={honeywell}
+              className="ntpc_img"
+              alt="NTPC"
+              id="honeywell"
+              srcset=""
+            />
+          </Link>
         </div>
         <div>
-          <img
-            src={tristar}
-            className="bhel_img"
-            id="tristar"
-            alt="Bharat Heavy Electicals Limited"
-            srcset=""
-          />
+          <Link to="/brands/products/tristar">
+            <img
+              src={tristar}
+              className="bhel_img"
+              id="tristar"
+              alt="Bharat Heavy Electicals Limited"
+              srcset=""
+            />
+          </Link>
         </div>
         <div>
           <img src={appleton} className="ongc_img" alt="ONGC" srcset="" />

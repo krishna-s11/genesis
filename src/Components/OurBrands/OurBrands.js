@@ -69,12 +69,19 @@ const OurBrands = () => {
           />
         </div>
         <div>
-          <img src={honeywell} className="ntpc_img" alt="NTPC" srcset="" />
+          <img
+            src={honeywell}
+            className="ntpc_img"
+            alt="NTPC"
+            id="honeywell"
+            srcset=""
+          />
         </div>
         <div>
           <img
             src={tristar}
             className="bhel_img"
+            id="tristar"
             alt="Bharat Heavy Electicals Limited"
             srcset=""
           />

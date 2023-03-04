@@ -14,3 +14,9 @@
 #arflu {
   transform: scale(0.6) translateX(-50px);
 }
+#honeywell {
+  transform: scale(0.7);
+}
+#tristar {
+  transform: scale(0.8);
+}

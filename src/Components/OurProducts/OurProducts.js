@@ -82,13 +82,13 @@ const OurProducts = () => {
               className="what_we_do_carousel_container"
               id="our_product_carousel"
             >
-              <img
-                className="what_we_do_carousel_img"
-                src={product.data.img}
-                alt="genesis manfacturer"
-                srcset=""
-              />
               <Link to={`/products/${product.id}`}>
+                <img
+                  className="what_we_do_carousel_img"
+                  src={product.data.img}
+                  alt="genesis manfacturer"
+                  srcset=""
+                />
                 <h3>{product.data.name}</h3>
               </Link>
             </div>

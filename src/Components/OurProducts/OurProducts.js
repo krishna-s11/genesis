@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ourProducts.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -10,6 +10,10 @@ import oil_gas from "../../Assets/oil_gas.png";
 import cathodic_protection from "../../Assets/cathodic_protection.jpeg";
 import junction from "../../Assets/junction.jpeg";
 import pattern from "../../Assets/backPattern.svg";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../firebase";
+import { Link } from "react-router-dom";
+import ScrollALittle from "../../Utility/ScrollALittle";
 
 const OurProducts = () => {
   var settings = {
@@ -49,21 +53,48 @@ const OurProducts = () => {
       },
     ],
   };
+
+  const [products, setProducts] = useState([]);
+
+  const fetch = async () => {
+    const querySnapshot = await getDocs(collection(db, "categories"));
+    querySnapshot.forEach((doc) => {
+      setProducts(
+        querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+      );
+    });
+  };
+
+  useEffect(() => {
+    fetch();
+  }, []);
+
+  console.log(products);
+
   return (
     <div className="our_products_home">
       {/* <img src={pattern} alt="" srcset="" id="our_product_background" /> */}
       <h1>Our Products</h1>
       <Slider {...settings} className="what_we_do_carousel">
-        <div className="what_we_do_carousel_container">
-          <img
-            className="what_we_do_carousel_img"
-            src={cable}
-            alt="genesis manfacturer"
-            srcset=""
-          />
-          <h3>Cable, Trays & Tensioner</h3>
-        </div>
-        <div className="what_we_do_carousel_container">
+        {products.map((product) => {
+          return (
+            <div
+              className="what_we_do_carousel_container"
+              id="our_product_carousel"
+            >
+              <img
+                className="what_we_do_carousel_img"
+                src={product.data.img}
+                alt="genesis manfacturer"
+                srcset=""
+              />
+              <Link to={`/products/${product.id}`}>
+                <h3>{product.data.name}</h3>
+              </Link>
+            </div>
+          );
+        })}
+        {/* <div className="what_we_do_carousel_container">
           <img
             className="what_we_do_carousel_img"
             src={heat_tracer}
@@ -107,7 +138,7 @@ const OurProducts = () => {
             srcset=""
           />
           <h3>Junction Boxes and Enclosures</h3>
-        </div>
+        </div> */}
       </Slider>
     </div>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import "./hero.css";
 import { BsArrowRightCircle } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const getInTouch = () => {

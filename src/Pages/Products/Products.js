@@ -3,6 +3,7 @@ import ProductCard from "../../Components/ProductCard/ProductCard";
 import "./products.css";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
+import ScrollALittle from "../../Utility/ScrollALittle";
 
 const Products = () => {
   const [categories, setCategories] = useState([]);
@@ -22,6 +23,7 @@ const Products = () => {
 
   return (
     <div className="products_pg">
+      <ScrollALittle />
       <div className="products_hero">
         <div className="hero_overlay_products_pg">
           <h1>Our Products</h1>

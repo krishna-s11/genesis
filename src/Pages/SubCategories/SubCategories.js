@@ -11,6 +11,7 @@ import {
   query,
 } from "firebase/firestore";
 import ProductCard from "../../Components/ProductCard/ProductCard";
+import ScrollALittle from "../../Utility/ScrollALittle";
 
 const SubCategories = () => {
   const category = useParams();
@@ -48,6 +49,7 @@ const SubCategories = () => {
 
   return (
     <div className="products_pg">
+      <ScrollALittle />
       <div className="products_hero">
         <div className="hero_overlay_products_pg">
           <h1>Our Products</h1>

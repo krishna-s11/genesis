@@ -6,7 +6,7 @@
   height: 60vh;
   background: url(../../Assets/services.jpeg) no-repeat;
   background-size: 100%;
-  background-position: 100%;
+  background-position: 50%;
   position: relative;
 }
 .hero_overlay_services_pg {

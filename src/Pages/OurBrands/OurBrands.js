@@ -6,10 +6,12 @@ import honeywell from "../../Assets/honeywell_logo.png";
 import tristar from "../../Assets/tristar_logo.png";
 import appleton from "../../Assets/appleton_logo.png";
 import { Link } from "react-router-dom";
+import ScrollALittle from "../../Utility/ScrollALittle";
 
 const OurBrands = () => {
   return (
     <div className="our_brands_pg">
+      <ScrollALittle />
       <div className="hero_our_brands_pg">
         <div className="hero_overlay_our_brands_pg">
           <h1>Our Brands</h1>
@@ -22,15 +24,17 @@ const OurBrands = () => {
             <img src={arflu} alt="" srcset="" />
           </Link>
           <Link to="/brands/products/anggerik_laksana">
-            <img src={anggerik} alt="" srcset="" />
+            <img src={anggerik} alt="" id="anggerik" srcset="" />
           </Link>
+          <img src={appleton} id="appleton" alt="" srcset="" />
+        </div>
+        <div className="our_brands_container sec_row">
           <Link to="/brands/products/honeywell">
             <img src={honeywell} alt="" srcset="" />
           </Link>
           <Link to="/brands/products/tristar">
-            <img src={tristar} alt="" srcset="" />
+            <img src={tristar} alt="" id="tristar" srcset="" />
           </Link>
-          <img src={appleton} alt="" srcset="" />
         </div>
       </div>
     </div>

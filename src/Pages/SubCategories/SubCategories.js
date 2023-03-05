@@ -76,7 +76,17 @@ const SubCategories = () => {
               <p>Loading</p>
             )
           ) : ( */}
-          {products ? (
+          {category.category === "2pszbbhbOMa9KVoFvJvk" ||
+          category.category === "8HGTW5FQ8Fow1NMuIjwo" ||
+          category.category === "8HKHxYiM1SHxwdBIfohh" ||
+          category.category === "DhWxO2uN7Nx06Jf9DiSL" ||
+          category.category === "Gp9OOGZBMYAZGqwVHFL0" ||
+          category.category === "OdPw6ZNB7p2Sl2aLLtFm" ||
+          category.category === "q4kS6pFeVJ9eq9Us8Rme" ||
+          category.category === "sjrmk4Vz6gwoewPnlOVn" ||
+          category.category === "vJuY2CW7En0lv1AKnm7L" ? (
+            <h3>Coming Soon !</h3>
+          ) : products ? (
             products.map((d) => {
               return (
                 <ProductCard

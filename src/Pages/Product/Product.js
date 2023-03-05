@@ -82,7 +82,9 @@ const Product = () => {
       <div className="products_content_container">
         <h1>{heading}</h1>
         <div className="products_card_container">
-          {products ? (
+          {brand === "appleton" ? (
+            <h3>Coming Soon !</h3>
+          ) : products ? (
             products.map((d) => {
               return (
                 <ProductCard

@@ -18,7 +18,7 @@ const OurBrands = () => {
         </div>
       </div>
       <div className="our_brands_content_container">
-        <h1>Products</h1>
+        <h1>Brands</h1>
         <div className="our_brands_container">
           <Link to="/brands/products/arflu">
             <img src={arflu} alt="" srcset="" />
@@ -26,7 +26,9 @@ const OurBrands = () => {
           <Link to="/brands/products/anggerik_laksana">
             <img src={anggerik} alt="" id="anggerik" srcset="" />
           </Link>
-          <img src={appleton} id="appleton" alt="" srcset="" />
+          <Link to="/brands/products/appleton">
+            <img src={appleton} id="appleton" alt="" srcset="" />
+          </Link>
         </div>
         <div className="our_brands_container sec_row">
           <Link to="/brands/products/honeywell">

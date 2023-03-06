@@ -18,6 +18,7 @@ const Product = () => {
   const sub_id = param.sub_category;
   const cat_id = param.category;
   const [subCategory, setSubCategory] = useState();
+  const [category, setCategory] = useState();
   const [products, setProducts] = useState();
   const brand = param.brand;
   const [heading, setHeading] = useState("");
@@ -26,6 +27,13 @@ const Product = () => {
 
   const fetchData = async () => {
     if (brand) {
+      const catRef = collection(db, "categories");
+      const catQ = query(catRef, where("brand", "==", brand));
+      const catSnapshot = await getDocs(catQ);
+      setCategory(
+        catSnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+      );
+
       const docRef = collection(db, "products");
       const q = query(docRef, where("brand", "==", brand));
       const querySnapshot = await getDocs(q);
@@ -47,6 +55,7 @@ const Product = () => {
     //   querySnapshot.docs.map((d) => ({ id: doc.id, data: doc.data() }))
     // );
   };
+  console.log(category);
   useEffect(() => {
     fetchData();
     if (brand) {
@@ -82,8 +91,16 @@ const Product = () => {
       <div className="products_content_container">
         <h1>{heading}</h1>
         <div className="products_card_container">
-          {brand === "appleton" ? (
-            <h3>Coming Soon !</h3>
+          {category?.length !== 0 ? (
+            category?.map((d) => {
+              return (
+                <ProductCard
+                  img={d.data.img}
+                  title={d.data.name}
+                  prodUrl={`/products/${d.id}`}
+                />
+              );
+            })
           ) : products ? (
             products.map((d) => {
               return (

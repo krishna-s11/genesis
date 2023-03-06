@@ -32,7 +32,7 @@ const Products = () => {
       <div className="products_content_container">
         <h1>Products</h1>
         <div className="products_card_container">
-          {categories ? (
+          {categories.length !== 0 ? (
             categories.map((d) => {
               return (
                 <ProductCard
@@ -43,7 +43,7 @@ const Products = () => {
               );
             })
           ) : (
-            <p>Loading</p>
+            <p>Loading... </p>
           )}
           {/* <ProductCard img={lighting} title="Lightings" /> */}
         </div>

@@ -18,8 +18,8 @@
   left: 0;
   background: linear-gradient(
     189deg,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(85, 84, 84, 0.7) 100%
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(85, 84, 84, 0.4) 100%
   );
   color: #fff;
 }

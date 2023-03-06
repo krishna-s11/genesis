@@ -12,9 +12,9 @@ import Reliance from "../../Assets/reliance.png";
 
 const OurCustomers = () => {
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 3,
     autoplay: true,

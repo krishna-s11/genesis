@@ -17,14 +17,14 @@ import ScrollALittle from "../../Utility/ScrollALittle";
 
 const OurProducts = () => {
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 2,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     initialSlide: 0,
     responsive: [
       {

@@ -12,9 +12,9 @@ import aftersales from "../../Assets/aftersales.jpeg";
 
 const WhatWeDo = () => {
   var settings = {
-    dots: false,
+    dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 2,
     arrows: false,

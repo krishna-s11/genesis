@@ -3,8 +3,8 @@
   align-items: center;
   height: 70vh;
   display: flex;
-  background: url(../../Assets/hero.jpeg);
-  background-size: 100%;
+  background: url(../../Assets/hero.jpeg) no-repeat;
+  background-size: cover;
   background-position-y: 80%;
   padding: 0 120px;
   position: relative;
@@ -52,4 +52,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (max-width: 450px) {
+  #welcome {
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
+  #genesis {
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #welcome {
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+  #genesis {
+    font-size: 40px;
+  }
+  #tagline {
+    font-size: 14px;
+    width: 350px;
+    font-weight: 700;
+    margin: 0 auto;
+  }
 }

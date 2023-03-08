@@ -20,3 +20,51 @@
 #tristar {
   transform: scale(0.8);
 }
+
+@media only screen and (max-width: 1200px) {
+  #arflu {
+    transform: scale(0.4) translateX(-100px);
+  }
+}
+@media only screen and (max-width: 850px) {
+  #arflu {
+    transform: scale(0.4) translateX(-200px);
+  }
+  #anggerik {
+    transform: translateX(-30px);
+  }
+}
+@media only screen and (max-width: 470px) {
+  #arflu {
+    transform: scale(0.6) translateX(30px);
+  }
+  #anggerik {
+    transform: translateX(80px);
+  }
+  #honeywell {
+    transform: translateX(70px);
+  }
+  #tristar {
+    transform: translateX(70px);
+  }
+  #appleton {
+    transform: translateX(125px);
+  }
+}
+@media only screen and (max-width: 350px) {
+  #arflu {
+    transform: scale(0.6) translateX(-40px);
+  }
+  #anggerik {
+    transform: translateX(25px);
+  }
+  #honeywell {
+    transform: translateX(25px);
+  }
+  #tristar {
+    transform: translateX(25px);
+  }
+  #appleton {
+    transform: translateX(70px);
+  }
+}

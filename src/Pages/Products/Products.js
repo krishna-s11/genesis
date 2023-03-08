@@ -11,15 +11,17 @@ const Products = () => {
   const fetchData = async () => {
     const querySnapshot = await getDocs(collection(db, "categories"));
     setCategories(
-      querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+      querySnapshot.docs
+        .map((doc) => ({ id: doc.id, data: doc.data() }))
+        .sort((a, b) => a.data.prec - b.data.prec)
     );
   };
 
   useEffect(() => {
     fetchData();
+    categories.sort((a, b) => a.data.prec - b.data.prec);
+    console.log(categories);
   }, []);
-
-  console.log(categories);
 
   return (
     <div className="products_pg">

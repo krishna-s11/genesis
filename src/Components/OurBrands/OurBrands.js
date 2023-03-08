@@ -69,6 +69,7 @@ const OurBrands = () => {
               src={anggerik}
               className="indian_oil_img"
               alt="Indian Oil"
+              id="anggerik"
               srcset=""
             />
           </Link>
@@ -96,7 +97,13 @@ const OurBrands = () => {
           </Link>
         </div>
         <div>
-          <img src={appleton} className="ongc_img" alt="ONGC" srcset="" />
+          <img
+            src={appleton}
+            id="appleton"
+            className="ongc_img"
+            alt="ONGC"
+            srcset=""
+          />
         </div>
       </Slider>
     </div>

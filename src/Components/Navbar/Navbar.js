@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "../../Assets/logo.png";
+import { GrClose } from "react-icons/gr";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
   window.scroll(function () {
@@ -9,11 +11,28 @@ const Navbar = () => {
     console.log(nav);
   });
 
+  const [disp, setDisp] = useState(0);
+
   return (
     <div className="navbar">
       <div style={{ fontWeight: "700", color: "#f6d337" }}>GENESIS ENERGY</div>
       <img src={logo} className="logo_img" alt="" srcset="" />
-      <ul className="nav_list">
+      <GiHamburgerMenu
+        id="ham"
+        onClick={() => {
+          setDisp(1);
+        }}
+      />
+      <ul
+        className="nav_list"
+        style={disp ? { display: "flex" } : { display: "none" }}
+      >
+        <GrClose
+          id="close_btn"
+          onClick={() => {
+            setDisp(0);
+          }}
+        />
         <Link to="/">
           <li className="nav_items">Home</li>
         </Link>

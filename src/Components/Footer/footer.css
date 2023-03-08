@@ -1,8 +1,9 @@
 .footer {
   width: 100%;
   background-color: #f8fea7;
-  height: 80vh;
+  height: 100%;
   display: flex;
+  padding-bottom: 30px;
 }
 .footer_map_holder {
   width: 50%;
@@ -10,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 .footer_map_holder img {
   width: 450px;
@@ -48,3 +50,28 @@
   margin-top: 20px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1250px) {
+  .footer_form textarea {
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+@media only screen and (max-width: 1069px) {
+  .footer_form textarea {
+    width: 100%;
+    border-radius: 20px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .form_rw input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .form_rw {
+    margin-bottom: 10px;
+  }
+}
+/* @media only screen and () */

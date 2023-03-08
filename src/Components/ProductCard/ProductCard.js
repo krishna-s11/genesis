@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import "./productsCard.css";
 
 const ProductCard = (props) => {
-  console.log(props);
   return (
     <Link to={props.prodUrl ? props.prodUrl : props.url}>
       <div className="products_card">

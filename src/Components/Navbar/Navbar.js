@@ -11,28 +11,23 @@ const Navbar = () => {
     console.log(nav);
   });
 
-  const [disp, setDisp] = useState(0);
-
   return (
     <div className="navbar">
       <div style={{ fontWeight: "700", color: "#f6d337" }}>GENESIS ENERGY</div>
       <img src={logo} className="logo_img" alt="" srcset="" />
-      <GiHamburgerMenu
+      {/* <GiHamburgerMenu
         id="ham"
         onClick={() => {
-          setDisp(1);
+          document.getElementById("nav_list").classList.remove("hide");
         }}
-      />
-      <ul
-        className="nav_list"
-        style={disp ? { display: "flex" } : { display: "none" }}
-      >
-        <GrClose
+      /> */}
+      <ul className="nav_list" id="nav_list">
+        {/* <GrClose
           id="close_btn"
           onClick={() => {
-            setDisp(0);
+            document.getElementById("nav_list").classList.add("hide");
           }}
-        />
+        /> */}
         <Link to="/">
           <li className="nav_items">Home</li>
         </Link>

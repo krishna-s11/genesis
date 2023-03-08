@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div style={{ fontWeight: "700", color: "#f6d337" }}>GENESIS ENERGY</div>
+      <div style={{ fontWeight: "700", color: "#49A2ED" }}>GENESIS ENERGY</div>
       <img src={logo} className="logo_img" alt="" srcset="" />
       {/* <GiHamburgerMenu
         id="ham"

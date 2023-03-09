@@ -2,7 +2,6 @@
   width: 300px;
   height: 250px;
   position: relative;
-  margin-right: 80px;
   cursor: pointer;
   margin-bottom: 100px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -11,9 +10,15 @@
   width: 300px;
   height: 250px;
 }
+.products_card:not(:last-child) {
+  margin-right: 80px;
+}
 .products_card h3 {
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 5px;
 }
+/* .products_card a {
+  text-align: center;
+} */

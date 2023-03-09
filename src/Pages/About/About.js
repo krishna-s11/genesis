@@ -12,7 +12,7 @@ const About = () => {
       </div>
       <div className="content_about_pg">
         <h1>About us</h1>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex" }} className="about_us_pg_container">
           <div className="content_about_pg_left">
             <p>
               Established under the aegis of industry stalwarts having more than

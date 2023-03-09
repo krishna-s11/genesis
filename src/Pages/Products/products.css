@@ -29,6 +29,8 @@
   transform: translate(-50%, -50%);
   font-size: 48px;
   letter-spacing: 1.5px;
+  width: 100%;
+  text-align: center;
   text-transform: uppercase;
 }
 .products_content_container {
@@ -51,4 +53,27 @@
 }
 .products_pg a {
   color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+  .products_content_container {
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: #fff;
+    padding: 50px 20px;
+  }
+  .products_card_container {
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    /* background-color: red; */
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hero_overlay_products_pg h1 {
+    font-size: 38px;
+  }
 }

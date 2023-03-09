@@ -21,7 +21,7 @@ const OurBrands = () => {
         <h1>Brands</h1>
         <div className="our_brands_container">
           <Link to="/brands/products/arflu">
-            <img src={arflu} alt="" srcset="" />
+            <img src={arflu} alt="" srcset="" id="arflu" />
           </Link>
           <Link to="/brands/products/anggerik_laksana">
             <img src={anggerik} alt="" id="anggerik" srcset="" />

@@ -13,21 +13,21 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div style={{ fontWeight: "700", color: "#a1c7e8" }}>GENESIS ENERGY</div>
+      <div style={{ fontWeight: "700", color: "#f1d358" }}>GENESIS ENERGY</div>
       <img src={logo} className="logo_img" alt="" srcset="" />
-      {/* <GiHamburgerMenu
+      <GiHamburgerMenu
         id="ham"
         onClick={() => {
           document.getElementById("nav_list").classList.remove("hide");
         }}
-      /> */}
+      />
       <ul className="nav_list" id="nav_list">
-        {/* <GrClose
+        <GrClose
           id="close_btn"
           onClick={() => {
             document.getElementById("nav_list").classList.add("hide");
           }}
-        /> */}
+        />
         <Link to="/">
           <li className="nav_items">Home</li>
         </Link>

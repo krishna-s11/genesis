@@ -5,7 +5,7 @@
   width: 100%;
   height: 60vh;
   background: url(../../Assets/aboutus.jpeg) no-repeat;
-  background-size: 100%;
+  background-size: cover;
   background-position: 100%;
   position: relative;
 }
@@ -28,6 +28,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 48px;
+  width: 100%;
+  text-align: center;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -52,4 +54,45 @@
   width: 400px;
   height: 400px;
   margin-top: 50px;
+}
+@media only screen and (max-width: 1000px) {
+  .content_about_pg {
+    width: 100%;
+    padding: 50px 40px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .content_about_pg_right img {
+    width: 300px;
+    height: 300px;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .content_about_pg {
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .about_us_pg_container {
+    flex-direction: column;
+  }
+  .content_about_pg_right {
+    order: 1;
+  }
+  .content_about_pg_left {
+    order: 2;
+  }
+  .content_about_pg_right img {
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .content_about_pg_right img {
+    height: 250px;
+  }
+  .hero_overlay_about_pg h1 {
+    font-size: 38px;
+  }
 }

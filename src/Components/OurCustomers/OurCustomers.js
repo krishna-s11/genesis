@@ -17,7 +17,7 @@ const OurCustomers = () => {
     speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 3,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     initialSlide: 0,
     arrows: false,
@@ -56,6 +56,7 @@ const OurCustomers = () => {
           <img
             src={Bharat}
             className="bharat_img"
+            id="bharat_img"
             alt="Bharat Petroleum"
             srcset=""
           />

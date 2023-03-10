@@ -31,12 +31,38 @@
 }
 .bhel_img {
   width: 300px;
+  margin: 0 auto;
 }
 .ongc_img {
   width: 200px;
   transform: translateX(30px);
+  margin: 0 auto;
 }
 .reliance_img {
   width: 200px;
   transform: translateX(60px);
+}
+
+@media only screen and (max-width: 450px) {
+  .bharat_img {
+    transform: translateX(0);
+  }
+  .indian_oil_img {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .ntpc_img {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .ongc_img {
+    width: 200px;
+    transform: translateX(0);
+    margin: 0 auto;
+  }
+  .reliance_img {
+    width: 200px;
+    transform: translateX(0px);
+    margin: 0 auto;
+  }
 }

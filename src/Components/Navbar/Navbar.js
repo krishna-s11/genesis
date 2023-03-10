@@ -18,14 +18,14 @@ const Navbar = () => {
       <GiHamburgerMenu
         id="ham"
         onClick={() => {
-          document.getElementById("nav_list").classList.remove("hide");
+          document.getElementById("nav_list").style.width = "300px";
         }}
       />
       <ul className="nav_list" id="nav_list">
         <GrClose
           id="close_btn"
           onClick={() => {
-            document.getElementById("nav_list").classList.add("hide");
+            document.getElementById("nav_list").style.width = "0px";
           }}
         />
         <Link to="/">

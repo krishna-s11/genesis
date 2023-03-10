@@ -4,6 +4,8 @@ import map from "../../Assets/map.png";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import Loader from "../Loader/Loader";
 
 const Footer = () => {
   const [details, setDetails] = useState({
@@ -13,6 +15,7 @@ const Footer = () => {
     phone: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
   const notify = () =>
     toast("Message sent", {
       position: "top-center",
@@ -38,6 +41,14 @@ const Footer = () => {
         (result) => {
           console.log(result.text);
           notify();
+          setLoading(false);
+          setDetails({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
         },
         (error) => {
           console.log(error.text);
@@ -50,6 +61,7 @@ const Footer = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     const name = details.firstName + " " + details.lastName;
     var templateParams = {
       name: name,
@@ -80,6 +92,7 @@ const Footer = () => {
               type="text"
               name="first name"
               id="firstName"
+              value={details.firstName}
               onChange={handleChange}
               placeholder="First Name"
             />
@@ -87,6 +100,7 @@ const Footer = () => {
               type="text"
               name="last name"
               id="lastName"
+              value={details.lastName}
               onChange={handleChange}
               placeholder="Second Name"
             />
@@ -96,6 +110,7 @@ const Footer = () => {
               type="email"
               name="email"
               id="email"
+              value={details.email}
               onChange={handleChange}
               placeholder="Email Addrress"
             />
@@ -103,6 +118,8 @@ const Footer = () => {
               type="tel"
               name="phone number"
               id="phone"
+              value={details.phone}
+              maxLength={13}
               onChange={handleChange}
               placeholder="Phone No."
             />
@@ -111,13 +128,14 @@ const Footer = () => {
             name="message"
             id="message"
             cols="69"
+            value={details.message}
             onChange={handleChange}
             rows="10"
             placeholder="Message"
           ></textarea>
         </div>
         <button className="footer_btn_send" onClick={handleSubmit}>
-          Send
+          {loading ? <Loader small /> : "Send"}
         </button>
       </div>
     </div>

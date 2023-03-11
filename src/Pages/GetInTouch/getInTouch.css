@@ -30,6 +30,8 @@
   font-size: 48px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
+  width: 100%;
+  text-align: center;
 }
 .contact_content_container {
   padding: 50px 100px;
@@ -79,4 +81,47 @@
   width: 500px;
   border-radius: 30px;
   margin-top: 50px;
+}
+
+@media only screen and (max-width: 1320px) {
+  #message {
+    width: 250px;
+  }
+  .contact_content_container input {
+    margin-bottom: 20px;
+  }
+  .form_container {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contact_img_container {
+    display: none;
+  }
+  .contact_img_container img {
+    display: none;
+  }
+  .contact_content_container {
+    width: 100%;
+    text-align: center;
+  }
+  .contact_content_container h1 {
+    display: block;
+  }
+  .contact_content_container input {
+    margin-right: 0;
+    width: 320px;
+  }
+  #message {
+    width: 320px;
+  }
+  .contact_content_container button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .contact_content_container {
+    padding: 50px 0px;
+  }
 }

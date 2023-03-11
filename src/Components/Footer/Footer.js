@@ -4,7 +4,8 @@ import map from "../../Assets/map.png";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { ImLocation2 } from "react-icons/im";
+import { BsFillTelephoneFill } from "react-icons/bs";
 import Loader from "../Loader/Loader";
 
 const Footer = () => {
@@ -84,9 +85,17 @@ const Footer = () => {
           <img src={map} alt="" srcset="" />
         </a>
         <p style={{ marginBottom: "5px" }}>
+          <ImLocation2
+            style={{ transform: "translateY(2px)", marginRight: "10px" }}
+          />
           RG/C-202 Radha Complex, Borivali East Mumbai - 400066
         </p>
-        <p>+91-9967017083</p>
+        <p>
+          <BsFillTelephoneFill
+            style={{ transform: "translateY(2px)", marginRight: "10px" }}
+          />
+          +91-9967017083
+        </p>
       </div>
       <div className="footer_getintouch">
         <h1>Get In Touch With Us</h1>

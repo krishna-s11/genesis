@@ -12,7 +12,13 @@ const Navbar = () => {
   });
 
   const resetWidth = () => {
-    document.getElementById("nav_list").style.width = "0px";
+    const width =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    if (width <= 1000) {
+      document.getElementById("nav_list").style.width = "0px";
+    }
   };
 
   return (
@@ -32,7 +38,12 @@ const Navbar = () => {
             document.getElementById("nav_list").style.width = "0px";
           }}
         />
-        <Link to="/" onClick={resetWidth}>
+        <Link
+          to="/"
+          onClick={() => {
+            resetWidth();
+          }}
+        >
           <li className="nav_items">Home</li>
         </Link>
         <Link to="/about_us" onClick={resetWidth}>

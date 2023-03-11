@@ -83,6 +83,10 @@ const Footer = () => {
         >
           <img src={map} alt="" srcset="" />
         </a>
+        <p style={{ marginBottom: "5px" }}>
+          RG/C-202 Radha Complex, Borivali East Mumbai - 400066
+        </p>
+        <p>+91-9967017083</p>
       </div>
       <div className="footer_getintouch">
         <h1>Get In Touch With Us</h1>

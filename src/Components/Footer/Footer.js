@@ -84,15 +84,21 @@ const Footer = () => {
         >
           <img src={map} alt="" srcset="" />
         </a>
-        <p style={{ marginBottom: "5px" }}>
+        <p style={{ marginBottom: "5px", width: "100%", textAlign: "center" }}>
           <ImLocation2
-            style={{ transform: "translateY(2px)", marginRight: "10px" }}
+            style={{
+              transform: "translateY(2px)",
+              marginRight: "10px",
+            }}
           />
           RG/C-202 Radha Complex, Borivali East Mumbai - 400066
         </p>
         <p>
           <BsFillTelephoneFill
-            style={{ transform: "translateY(2px)", marginRight: "10px" }}
+            style={{
+              transform: "translateY(2px)",
+              marginRight: "10px",
+            }}
           />
           +91-9967017083
         </p>

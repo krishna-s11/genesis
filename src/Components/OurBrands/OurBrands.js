@@ -17,7 +17,7 @@ const OurBrands = () => {
     speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 4,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     initialSlide: 0,
     arrows: false,

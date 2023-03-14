@@ -5,7 +5,7 @@ export default function ScrollALittle() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo(0, 200);
+    window.scrollTo(0, 300);
   }, [pathname]);
 
   return null;

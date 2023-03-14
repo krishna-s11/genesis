@@ -56,7 +56,7 @@ const Navbar = () => {
           <li className="nav_items">Our Brands</li>
         </Link>
         <Link to="/news" onClick={resetWidth}>
-          <li className="nav_items">News & Media</li>
+          <li className="nav_items">News & Blogs</li>
         </Link>
         <Link to="/projects" onClick={resetWidth}>
           <li className="nav_items">Projects</li>

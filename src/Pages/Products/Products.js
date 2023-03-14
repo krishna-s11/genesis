@@ -25,7 +25,7 @@ const Products = () => {
 
   return (
     <div className="products_pg">
-      <ScrollALittle />
+      {/* <ScrollALittle /> */}
       <div className="products_hero">
         <div className="hero_overlay_products_pg">
           <h1>Our Products</h1>

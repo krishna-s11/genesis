@@ -11,7 +11,6 @@ import ScrollALittle from "../../Utility/ScrollALittle";
 const OurBrands = () => {
   return (
     <div className="our_brands_pg">
-      <ScrollALittle />
       <div className="hero_our_brands_pg">
         <div className="hero_overlay_our_brands_pg">
           <h1>Our Brands</h1>

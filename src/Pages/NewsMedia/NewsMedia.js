@@ -7,7 +7,7 @@ const NewsMedia = () => {
     <div className="news_media_pg">
       <div className="hero_news_media">
         <div className="hero_news_media_overlay">
-          <h1>News & Media</h1>
+          <h1>News & Blogs</h1>
         </div>
       </div>
       <div className="news_media_content">

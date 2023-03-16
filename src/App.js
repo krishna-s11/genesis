@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react'
 import "./App.css";
 import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
@@ -14,10 +15,29 @@ import Product from "./Pages/Product/Product";
 import OurBrands from "./Components/OurBrands/OurBrands";
 import OurBrandsPG from "./Pages/OurBrands/OurBrands";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail";
+import Loader from './Components/Loader/Loader';
+import WifiLoader from './Pages/WifiLoader/WifiLoader';
 
 function App() {
+  const [loading, setLoading] = useState(false)
+  
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  }  
+  
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, getRandomInt(4000,6000))
+  },[])
   return (
     <div className="App">
+      {
+        loading?<WifiLoader />: null
+      }
       <Navbar />
       <div style={{ width: "100%", marginTop: "120px" }}>
         <Routes>

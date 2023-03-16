@@ -13,7 +13,7 @@ const Hero = () => {
         <div className="hero_left">
           <h1 id="welcome">Welcome to</h1>
           <h1 id="genesis">GENESIS ENERGY</h1>
-          <p style={{ marginTop: "20px", letterSpacing: "2px" }} id="tagline">
+          <p style={{ marginTop: "20px", letterSpacing: "3px",fontWeight: "600" }} id="tagline">
             "Creating value through comprehensive solutions for energy sector"
           </p>
           <p id="getintouch" onClick={getInTouch}>

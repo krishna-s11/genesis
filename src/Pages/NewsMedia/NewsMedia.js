@@ -13,19 +13,20 @@ const NewsMedia = () => {
       <div className="news_media_content">
         <h1>Blogs</h1>
         <div className="news_media_card_container">
+        <h2 style={{marginTop: "60px"}}>Coming Soon !</h2>
+          {/* <NewsCard />
           <NewsCard />
-          <NewsCard />
-          <NewsCard />
+          <NewsCard /> */}
         </div>
       </div>
-      <div className="news_media_content">
+      {/* <div className="news_media_content">
         <h1>News & Media</h1>
         <div className="news_media_card_container">
           <NewsCard />
           <NewsCard />
           <NewsCard />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

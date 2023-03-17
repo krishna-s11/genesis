@@ -53,6 +53,42 @@
   text-decoration: none;
   color: #000;
 }
+#product {
+  position: relative;
+}
+.dropdown {
+  width: 180px;
+  background-color: #f1d358;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
+  position: absolute;
+  bottom: -300px;
+  left: -50%;
+  padding: 10px;
+  display: none;
+  text-align: center;
+  transition: all 0.3s;
+  overflow: hidden;
+  padding-top: 20px;
+}
+#brand_dropdown {
+  bottom: -260px;
+  left: -60%;
+}
+.dropdown ul {
+  list-style: none;
+  width: 100%;
+}
+#product:hover > .dropdown {
+  display: block;
+  /* height: 300px; */
+}
+#brands:hover > .dropdown {
+  display: block;
+  /* height: 300px; */
+}
+.dropdown ul li {
+  margin-bottom: 20px;
+}
 #close_btn {
   position: absolute;
   top: 30px;

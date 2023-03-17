@@ -1,31 +1,28 @@
-import React from 'react'
-import './loading.css'
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-import BounceLoader from "react-spinners/BounceLoader";
+import React from "react";
+import "./loading.css";
 import PropagateLoader from "react-spinners/PropagateLoader";
-import SyncLoader from "react-spinners/SyncLoader";
-import RiseLoader from "react-spinners/RiseLoader";
-import BarLoader from "react-spinners/BarLoader";
 import logo from "../../Assets/logo.png";
+import internet from "../../Assets/Internet.gif";
 
 const Loading = () => {
-    return (
-        <div className='loading'>
-            <img src={logo} alt="" srcset=""/>
-            {/* <BounceLoader color= '#36D7B7' size={100} /> */}
-            <PropagateLoader color="#f1d358" size={10} speedMultiplier={0.8}/>
-            {/* <SyncLoader color="#f1d358" size={10} /> */}
-            {/* <RiseLoader
+  return (
+    <div className="loading">
+      {/* <img src={logo} alt="" srcset="" /> */}
+      {/* <BounceLoader color= '#36D7B7' size={100} /> */}
+      {/* <PropagateLoader color="#f1d358" size={10} speedMultiplier={0.8} /> */}
+      <img src={internet} alt="" srcset="" />
+      {/* <SyncLoader color="#f1d358" size={10} /> */}
+      {/* <RiseLoader
             color="#36d7b7"
             size={10}
             speedMultiplier={0.8}
           /> */}
-          {/* <BarLoader
+      {/* <BarLoader
             color="#f1d358"
             width={150}
           /> */}
-        </div>
-    )
-}
+    </div>
+  );
+};
 
-export default Loading
+export default Loading;

@@ -34,6 +34,7 @@
 .our_brands_content_container {
   width: 100%;
   padding: 50px 120px;
+  background-color: #eee;
 }
 .our_brands_content_container h1 {
   display: flex;

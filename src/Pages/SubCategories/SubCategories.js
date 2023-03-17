@@ -57,8 +57,10 @@ const SubCategories = () => {
       </div>
       <div className="products_content_container">
         <h1>
-          {categoryData?.name.charAt(0).toUpperCase() +
-            categoryData?.name.slice(1)}
+          {categoryData
+            ? categoryData?.name.charAt(0).toUpperCase() +
+              categoryData?.name.slice(1)
+            : null}
         </h1>
         <div className="products_card_container">
           {/* {emFlag ? (

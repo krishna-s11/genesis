@@ -48,8 +48,10 @@
   display: flex;
   margin-top: 40px;
   justify-content: space-around;
-  /* background-color: red; */
   flex-wrap: wrap;
+}
+.products_card_container:last-child {
+  margin-right: 0px;
 }
 .products_pg a {
   color: #000;

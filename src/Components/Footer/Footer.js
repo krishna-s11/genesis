@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ImLocation2 } from "react-icons/im";
+import { GiFactory } from "react-icons/gi";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import Loader from "../Loader/Loader";
 
@@ -93,11 +94,29 @@ const Footer = () => {
           />
           RG/C-202 Radha Complex, Borivali East Mumbai - 400066
         </p>
+        <p
+          style={{
+            marginBottom: "5px",
+            minWidth: "350px",
+            maxWidth: "430px",
+            marginTop: "10px",
+          }}
+        >
+          <GiFactory
+            style={{
+              transform: "translateY(2px)",
+              marginRight: "10px",
+            }}
+          />
+          Industrial Shed - 1, Rashid Compound, NH8 Highway, Near Bavkhal Petrol
+          Pump, Virar - East, District - Palghar, Maharashtra - 401208
+        </p>
         <p>
           <BsFillTelephoneFill
             style={{
               transform: "translateY(2px)",
               marginRight: "10px",
+              marginTop: "10px",
             }}
           />
           +91-9967017083

@@ -4,6 +4,10 @@ import "./productDetail.css";
 import { db } from "../../firebase";
 import { doc, getDoc } from "firebase/firestore";
 import ScrollALittle from "../../Utility/ScrollALittle";
+import SameControl from "../../Assets/same_control.png";
+import SimulationControl from "../../Assets/simulation_control.png";
+import EquipmentModelling from "../../Assets/equipment_modelling.png";
+import ExerciseGrading from "../../Assets/exercise_grading.png";
 
 const ProductDetail = () => {
   const id = useParams();
@@ -48,6 +52,14 @@ const ProductDetail = () => {
             <img src={product?.img} alt="" srcset="" />
           </div>
         </div>
+        {id.id === "F4ghAtGDWfNcYaWu5u9E" ? (
+          <div className="simulation_container">
+            <img src={SameControl} alt="" srcset="" />
+            <img src={SimulationControl} alt="" srcset="" />
+            <img src={EquipmentModelling} alt="" srcset="" />
+            <img src={ExerciseGrading} alt="" srcset="" />
+          </div>
+        ) : null}
       </div>
     </div>
   );

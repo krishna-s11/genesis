@@ -1,6 +1,6 @@
 import React from "react";
 import "./ourBrands.css";
-import arflu from "../../Assets/arflu_logo.png";
+import arflu from "../../Assets/logo-arflu.png";
 import anggerik from "../../Assets/anggerik_logo.png";
 import honeywell from "../../Assets/honeywell_logo.png";
 import tristar from "../../Assets/tristar_logo.png";
@@ -19,24 +19,34 @@ const OurBrands = () => {
       <div className="our_brands_content_container">
         <h1>Brands</h1>
         <div className="our_brands_container">
-          <Link to="/brands/products/arflu">
-            <img src={arflu} alt="" srcset="" id="arflu" />
-          </Link>
-          <Link to="/brands/products/anggerik_laksana">
-            <img src={anggerik} alt="" id="anggerik" srcset="" />
-          </Link>
-          <Link to="/brands/products/appleton">
-            <img src={appleton} id="appleton" alt="" srcset="" />
-          </Link>
+          <div className="logo_container">
+            <Link to="/brands/products/arflu">
+              <img src={arflu} alt="" srcset="" id="arflu" />
+            </Link>
+          </div>
+          <div className="logo_container">
+            <Link to="/brands/products/anggerik_laksana">
+              <img src={anggerik} alt="" id="anggerik_brand" srcset="" />
+            </Link>
+          </div>
+          <div className="logo_container">
+            <Link to="/brands/products/appleton">
+              <img src={appleton} id="appleton_brand" alt="" srcset="" />
+            </Link>
+          </div>
+          <div className="logo_container">
+            <Link to="/brands/products/honeywell">
+              <img src={honeywell} alt="" id="honeywell_brand" srcset="" />
+            </Link>
+          </div>
+          <div className="logo_container tristar_cont">
+            <Link to="/brands/products/tristar">
+              <img src={tristar} alt="" id="tristar_brand" srcset="" />
+            </Link>
+          </div>
         </div>
-        <div className="our_brands_container sec_row">
-          <Link to="/brands/products/honeywell">
-            <img src={honeywell} alt="" srcset="" />
-          </Link>
-          <Link to="/brands/products/tristar">
-            <img src={tristar} alt="" id="tristar" srcset="" />
-          </Link>
-        </div>
+        {/* <div className="our_brands_container sec_row"> */}
+        {/* </div> */}
       </div>
     </div>
   );

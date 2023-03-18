@@ -44,9 +44,12 @@
 .our_brands_container {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   padding-top: 50px;
+}
+.our_brands_container:last-child {
+  margin-right: 0;
 }
 .our_brands_container img {
   width: 200px;
@@ -66,7 +69,35 @@
 .our_brands_pg .sec_row {
   justify-content: center;
 }
-
+.logo_container {
+  /* background-color: red; */
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 50px;
+  margin-right: 20px;
+}
+#arflu {
+  transform: scale(1.2) translateY(20px);
+}
+#anggerik_brand {
+  transform: scale(1.2) translateY(25px) !important;
+}
+#appleton_brand {
+  transform: scale(0.9) translateY(28px) !important;
+}
+#honeywell_brand {
+  transform: translateY(25px);
+}
+.tristar_cont {
+  height: 200px;
+}
+#tristar_brand {
+  transform: translateY(25px);
+}
 @media only screen and (max-width: 600px) {
   .our_brands_container {
     width: 100%;

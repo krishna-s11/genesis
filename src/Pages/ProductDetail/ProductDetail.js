@@ -6,7 +6,7 @@ import { doc, getDoc } from "firebase/firestore";
 import ScrollALittle from "../../Utility/ScrollALittle";
 import SameControl from "../../Assets/same_control.png";
 import SimulationControl from "../../Assets/simulation_control.png";
-import EquipmentModelling from "../../Assets/equipment_modelling.png";
+import EquipmentModelling from "../../Assets/equipment_modelling3.png";
 import ExerciseGrading from "../../Assets/exercise_grading.png";
 
 const ProductDetail = () => {

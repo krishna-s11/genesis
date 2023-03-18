@@ -147,6 +147,9 @@
   #close_btn {
     display: block;
   }
+  .dropdown {
+    display: none;
+  }
 }
 @media only screen and (max-width: 400px) {
   #ham {

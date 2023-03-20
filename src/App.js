@@ -49,14 +49,17 @@ function App() {
           <Route path="/about_us" element={<About />} />
           <Route path="/news" element={<NewsMedia />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/products/:category" element={<SubCategories />} />
+          <Route
+            path="/products/:category/:brand"
+            element={<SubCategories />}
+          />
           {/* <Route
             path="/products/:category/:sub_category"
             element={<Product />}
           /> */}
           <Route path="brands/products/:brand" element={<Product />} />
           <Route path="/our_brands" element={<OurBrandsPG />} />
-          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/product/:id/:brand" element={<ProductDetail />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact_us" element={<GetInTouch />} />

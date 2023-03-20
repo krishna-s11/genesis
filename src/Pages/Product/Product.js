@@ -89,7 +89,7 @@ const Product = () => {
         </div>
       </div>
       <div className="products_content_container">
-        <h1>{heading}</h1>
+        <h1>{heading} kdfklskl</h1>
         <div className="products_card_container">
           {category?.length !== 0 ? (
             category?.map((d) => {
@@ -97,7 +97,11 @@ const Product = () => {
                 <ProductCard
                   img={d.data.img}
                   title={d.data.name}
-                  prodUrl={`/products/${d.id}`}
+                  prodUrl={
+                    window.location.href.includes("appleton")
+                      ? `/products/${d.id}/appleton`
+                      : `/products/${d.id}/undefined`
+                  }
                 />
               );
             })
@@ -108,7 +112,11 @@ const Product = () => {
                   img={d.data.img}
                   title={d.data.name}
                   // url={`products/${cat_id}/${sub_id}}`}
-                  prodUrl={`/product/${d.id}`}
+                  prodUrl={
+                    window.location.href.includes("appleton")
+                      ? `/product/${d.id}/appleton`
+                      : `/product/${d.id}/undefined`
+                  }
                 />
               );
             })

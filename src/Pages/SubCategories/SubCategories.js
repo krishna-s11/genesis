@@ -15,11 +15,12 @@ import ScrollALittle from "../../Utility/ScrollALittle";
 
 const SubCategories = () => {
   const category = useParams();
+  const brand = useParams();
   const [categoryData, setCategoryData] = useState();
   const [subCategory, setSubCategory] = useState([]);
   const [products, setProducts] = useState();
   const [emFlag, setEmFlag] = useState(1);
-
+  console.log(brand.brand);
   const fetchData = async () => {
     const cat_docRef = doc(db, "categories", category.category);
     const cat_docSnap = await getDoc(cat_docRef);
@@ -28,18 +29,34 @@ const SubCategories = () => {
     const q = query(sub_ref, where("category", "==", category.category));
     const querySnapshot = await getDocs(q);
     console.log(querySnapshot.docs);
-    if (querySnapshot.empty) {
-      setEmFlag(0);
-      const prodRef = collection(db, "products");
-      const q = query(prodRef, where("category", "==", category.category));
-      const querySnapshot = await getDocs(q);
-      setProducts(
-        querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-      );
+    if (brand.brand === "appleton") {
+      if (querySnapshot.empty) {
+        setEmFlag(0);
+        const prodRef = collection(db, "appleton");
+        const q = query(prodRef, where("category", "==", category.category));
+        const querySnapshot = await getDocs(q);
+        setProducts(
+          querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        );
+      } else {
+        setSubCategory(
+          querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        );
+      }
     } else {
-      setSubCategory(
-        querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-      );
+      if (querySnapshot.empty) {
+        setEmFlag(0);
+        const prodRef = collection(db, "products");
+        const q = query(prodRef, where("category", "==", category.category));
+        const querySnapshot = await getDocs(q);
+        setProducts(
+          querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        );
+      } else {
+        setSubCategory(
+          querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        );
+      }
     }
   };
 
@@ -85,7 +102,11 @@ const SubCategories = () => {
                   img={d.data.img}
                   title={d.data.name}
                   // url={`product/${d.id}`}
-                  prodUrl={`/product/${d.id}`}
+                  prodUrl={
+                    window.location.href.includes("appleton")
+                      ? `/product/${d.id}/appleton`
+                      : `/product/${d.id}/${d.brand}`
+                  }
                 />
               );
             })

@@ -13,9 +13,15 @@ const ProductDetail = () => {
   const id = useParams();
   const [product, setProduct] = useState([]);
   const fetchData = async () => {
-    const docRef = doc(db, "products", id.id);
-    const docSnap = await getDoc(docRef);
-    setProduct(docSnap.data());
+    if (id.brand === "appleton") {
+      const docRef = doc(db, "appleton", id.id);
+      const docSnap = await getDoc(docRef);
+      setProduct(docSnap.data());
+    } else {
+      const docRef = doc(db, "products", id.id);
+      const docSnap = await getDoc(docRef);
+      setProduct(docSnap.data());
+    }
   };
   useEffect(() => {
     fetchData();
@@ -33,13 +39,20 @@ const ProductDetail = () => {
         <h1>{product?.name}</h1>
         <div style={{ display: "flex" }} className="about_us_pg_container">
           <div className="content_about_pg_left">
-            {product ? (
+            {window.location.href.includes("appleton") ? (
+              <p>{product?.details}</p>
+            ) : (
+              product.details?.map((d) => {
+                return <p>{d}</p>;
+              })
+            )}
+            {/* {product ? (
               product.details?.map((d) => {
                 return <p>{d}</p>;
               })
             ) : (
               <p>Loading...</p>
-            )}
+            )} */}
             {/* {product ? (
               product.details?.map((d) => {
                 return <p>{d}</p>;

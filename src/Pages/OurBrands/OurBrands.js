@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ourBrands.css";
 import arflu from "../../Assets/logo-arflu.png";
 import anggerik from "../../Assets/anggerik_logo.png";
@@ -7,8 +7,30 @@ import tristar from "../../Assets/tristar_logo.png";
 import appleton from "../../Assets/appleton_logo.png";
 import { Link } from "react-router-dom";
 import ScrollALittle from "../../Utility/ScrollALittle";
+import { db } from "../../firebase";
+import {
+  getDocs,
+  getDoc,
+  doc,
+  where,
+  collection,
+  query,
+} from "firebase/firestore";
 
 const OurBrands = () => {
+  const delFun = async () => {
+    const ref = collection(db, "products");
+    const q = query(ref, where("brand", "==", "appleton"));
+    const querySnapshot = await getDocs();
+    querySnapshot.forEach(function (doc) {
+      doc.ref.delete();
+    });
+  };
+
+  useEffect(() => {
+    delFun();
+  });
+
   return (
     <div className="our_brands_pg">
       <div className="hero_our_brands_pg">

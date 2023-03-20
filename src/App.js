@@ -17,6 +17,7 @@ import OurBrandsPG from "./Pages/OurBrands/OurBrands";
 import ProductDetail from "./Pages/ProductDetail/ProductDetail";
 import Loader from "./Components/Loader/Loader";
 import WifiLoader from "./Pages/WifiLoader/WifiLoader";
+import Dashboard from "./Pages/AdminPanel/Dashboard/Dashboard";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -26,6 +27,7 @@ function App() {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
+  const url = window.location.href;
 
   useEffect(() => {
     setLoading(true);
@@ -33,13 +35,14 @@ function App() {
       setLoading(false);
     }, getRandomInt(4000, 6000));
   }, []);
+  console.log(url);
   return (
     <div className="App">
       {/* {
         loading?<WifiLoader />: null
       } */}
       {/* <WifiLoader /> */}
-      <Navbar />
+      {url.includes("admin") ? null : <Navbar />}
       <div style={{ width: "100%", marginTop: "120px" }}>
         <Routes>
           <Route exact path="/" element={<Home />} />
@@ -57,6 +60,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact_us" element={<GetInTouch />} />
+          <Route path="/admin/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
       {document.location.pathname.includes("contact_us") ? null : <Footer />}

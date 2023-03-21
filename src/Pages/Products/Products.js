@@ -40,7 +40,7 @@ const Products = () => {
                 <ProductCard
                   img={d.data.img}
                   title={d.data.name}
-                  url={`${d.id}`}
+                  url={`${d.id}/undefined`}
                 />
               );
             })

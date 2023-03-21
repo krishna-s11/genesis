@@ -89,7 +89,7 @@ const Product = () => {
         </div>
       </div>
       <div className="products_content_container">
-        <h1>{heading} kdfklskl</h1>
+        <h1>{heading}</h1>
         <div className="products_card_container">
           {category?.length !== 0 ? (
             category?.map((d) => {

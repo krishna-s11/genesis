@@ -23,8 +23,18 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div style={{ fontWeight: "700", color: "#f1d358" }}>GENESIS ENERGY</div>
-      <img src={logo} className="logo_img" alt="" srcset="" />
+      <div style={{ fontWeight: "700", color: "#f1d358" }}>
+        {"              "}
+      </div>
+      <img
+        src={logo}
+        className="logo_img"
+        alt=""
+        srcset=""
+        onClick={() => {
+          window.location.href = "/";
+        }}
+      />
       <GiHamburgerMenu
         id="ham"
         onClick={() => {

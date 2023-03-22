@@ -11,77 +11,77 @@
 .our_brands img {
   z-index: -1;
 }
-#arflu {
+#arflu_component {
   transform: scale(0.6) translateX(-50px);
 }
-#honeywell {
+#honeywell_component {
   transform: scale(0.7);
 }
-#tristar {
+#tristar_component {
   transform: scale(0.8);
 }
 
 @media only screen and (max-width: 1200px) {
-  #arflu {
+  #arflu_component {
     transform: scale(0.4) translateX(-100px);
   }
 }
 @media only screen and (max-width: 850px) {
-  #arflu {
+  #arflu_component {
     transform: scale(0.4) translateX(-200px);
   }
-  #anggerik {
+  #anggerik_component {
     transform: translateX(-30px);
   }
 }
 @media only screen and (max-width: 470px) {
-  #arflu {
+  #arflu_component {
     transform: scale(0.6) translateX(0);
   }
-  #anggerik {
+  #anggerik_component {
     transform: translateX(0);
   }
-  #honeywell {
+  #honeywell_component {
     transform: translateX(0);
   }
-  #tristar {
+  #tristar_component {
     transform: translateX(0);
   }
-  #appleton {
+  #appleton_component {
     transform: translateX(0);
   }
 }
 @media only screen and (max-width: 400px) {
-  #arflu {
+  #arflu_component {
     transform: scale(0.6) translateX(0);
   }
-  #anggerik {
+  #anggerik_component {
     transform: translateX(0);
   }
-  #honeywell {
+  #honeywell_component {
     transform: translateX(0px) scale(0.8);
   }
-  #tristar {
+  #tristar_component {
     transform: translateX(0) scale(0.8);
   }
-  #appleton {
+  #appleton_component {
     transform: translateX(0);
   }
 }
 @media only screen and (max-width: 350px) {
-  #arflu {
+  #arflu_component {
     transform: scale(0.6) translateX(-40px);
   }
-  #anggerik {
+  #anggerik_component {
     transform: translateX(25px);
   }
-  #honeywell {
+  #honeywell_component {
     transform: translateX(25px);
   }
-  #tristar {
+  #tristar_component {
     transform: translateX(25px);
   }
-  #appleton {
+  #appleton_component {
     transform: translateX(70px);
   }
 }

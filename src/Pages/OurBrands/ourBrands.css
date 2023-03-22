@@ -72,6 +72,7 @@
 .logo_container {
   /* background-color: red; */
   width: 300px;
+  min-width: 300px;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -87,7 +88,7 @@
   transform: scale(1.2) translateY(25px) !important;
 }
 #appleton_brand {
-  transform: scale(0.9) translateY(28px) !important;
+  transform: scale(1) translateY(28px) !important;
 }
 #honeywell_brand {
   transform: translateY(25px);

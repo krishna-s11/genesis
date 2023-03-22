@@ -5,6 +5,7 @@ import anggerik from "../../Assets/anggerik_logo.png";
 import honeywell from "../../Assets/honeywell_logo.png";
 import tristar from "../../Assets/tristar_logo.png";
 import appleton from "../../Assets/appleton_logo.png";
+import appleton_logo from "../../Assets/appleton.png";
 import { Link } from "react-router-dom";
 import ScrollALittle from "../../Utility/ScrollALittle";
 import { db } from "../../firebase";
@@ -53,7 +54,7 @@ const OurBrands = () => {
           </div>
           <div className="logo_container">
             <Link to="/brands/products/appleton">
-              <img src={appleton} id="appleton_brand" alt="" srcset="" />
+              <img src={appleton_logo} id="appleton_brand" alt="" srcset="" />
             </Link>
           </div>
           <div className="logo_container">

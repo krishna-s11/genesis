@@ -55,7 +55,7 @@ const OurBrands = () => {
         <div>
           <Link to="brands/products/arflu">
             <img
-              id="arflu"
+              id="arflu_component"
               src={arflu}
               className="bharat_img"
               alt="Bharat Petroleum"
@@ -69,7 +69,7 @@ const OurBrands = () => {
               src={anggerik}
               className="indian_oil_img"
               alt="Indian Oil"
-              id="anggerik"
+              id="anggerik_component"
               srcset=""
             />
           </Link>
@@ -80,7 +80,7 @@ const OurBrands = () => {
               src={honeywell}
               className="ntpc_img"
               alt="NTPC"
-              id="honeywell"
+              id="honeywell_component"
               srcset=""
             />
           </Link>
@@ -90,7 +90,7 @@ const OurBrands = () => {
             <img
               src={tristar}
               className="bhel_img"
-              id="tristar"
+              id="tristar_component"
               alt="Bharat Heavy Electicals Limited"
               srcset=""
             />
@@ -99,7 +99,7 @@ const OurBrands = () => {
         <div>
           <img
             src={appleton}
-            id="appleton"
+            id="appleton_component"
             className="ongc_img"
             alt="ONGC"
             srcset=""

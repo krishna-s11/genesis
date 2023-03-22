@@ -18,9 +18,10 @@ import ProductDetail from "./Pages/ProductDetail/ProductDetail";
 import Loader from "./Components/Loader/Loader";
 import WifiLoader from "./Pages/WifiLoader/WifiLoader";
 import Dashboard from "./Pages/AdminPanel/Dashboard/Dashboard";
+import GlobeLoader from "./Pages/GlobeLoader/GlobeLoader";
 
 function App() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   function getRandomInt(min, max) {
     min = Math.ceil(min);
@@ -33,15 +34,13 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, getRandomInt(4000, 6000));
+    }, getRandomInt(4000));
   }, []);
   console.log(url);
   return (
     <div className="App">
-      {/* {
-        loading?<WifiLoader />: null
-      } */}
-      {/* <WifiLoader /> */}
+      {/* {loading ? <GlobeLoader /> : null} */}
+      <GlobeLoader />
       {url.includes("admin") ? null : <Navbar />}
       <div style={{ width: "100%", marginTop: "120px" }}>
         <Routes>

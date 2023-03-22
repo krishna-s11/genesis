@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Router, useLocation, useNavigate } from "react-router-dom";
 import "./navbar.css";
 import logo from "../../Assets/logo.png";
 import { GrClose } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   window.scroll(function () {
     var nav = document.getElementsByClassName("navbar");
     console.log(nav);
@@ -32,7 +33,7 @@ const Navbar = () => {
         alt=""
         srcset=""
         onClick={() => {
-          window.location.href = "/";
+          navigate("/");
         }}
       />
       <GiHamburgerMenu

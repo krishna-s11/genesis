@@ -7,7 +7,7 @@ import arflu from "../../Assets/arflu_logo.png";
 import anggerik from "../../Assets/anggerik_logo.png";
 import honeywell from "../../Assets/honeywell_logo.png";
 import tristar from "../../Assets/tristar_logo.png";
-import appleton from "../../Assets/appleton_logo.png";
+import appleton from "../../Assets/appleton.png";
 import { Link } from "react-router-dom";
 
 const OurBrands = () => {

@@ -5,6 +5,9 @@
   padding-top: 50px;
   z-index: 3;
 }
+.what_we_do_pg a {
+  color: #000;
+}
 .what_we_do_pg h1 {
   width: 100%;
   display: flex;

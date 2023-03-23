@@ -64,22 +64,22 @@ const Navbar = () => {
           <li className="nav_items">Products</li>
           <div className="dropdown">
             <ul>
-              <Link to="/products/qxLDeuq6UtomdtONMLoh">
+              <Link to="/products/qxLDeuq6UtomdtONMLoh/undefined">
                 <li>Simulation Systems</li>
               </Link>
-              <Link to="/products/ZzKJEJYZEaQ7WgmOJ52l">
+              <Link to="/products/ZzKJEJYZEaQ7WgmOJ52l/undefined">
                 <li>Callidus Flares</li>
               </Link>
-              <Link to="/products/Iy3K2lop1tHLqoJtz9Aw">
+              <Link to="/products/Iy3K2lop1tHLqoJtz9Aw/undefined">
                 <li>Callidus Burners</li>
               </Link>
-              <Link to="/products/BARAsRq0ujfXOEeJZYiJ">
+              <Link to="/products/BARAsRq0ujfXOEeJZYiJ/undefined">
                 <li>Control Offering</li>
               </Link>
-              <Link to="/products/8HGTW5FQ8Fow1NMuIjwo">
+              <Link to="/products/8HGTW5FQ8Fow1NMuIjwo/appleton">
                 <li>Reels and Switches</li>
               </Link>
-              <Link to="/products/C31QOWflUvTtbO73tOGj">
+              <Link to="/products/C31QOWflUvTtbO73tOGj/undefined">
                 <li>Bolting Solutions</li>
               </Link>
               <Link to="/products">

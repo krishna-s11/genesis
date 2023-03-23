@@ -82,7 +82,7 @@ const OurProducts = () => {
               className="what_we_do_carousel_container"
               id="our_product_carousel"
             >
-              <Link to={`/products/${product.id}`}>
+              <Link to={`/products/${product.id}/undefined`}>
                 <img
                   className="what_we_do_carousel_img"
                   src={product.data.img}

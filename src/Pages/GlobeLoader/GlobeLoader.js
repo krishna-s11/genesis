@@ -59,7 +59,7 @@ const GlobeLoader = () => {
     // Set active state
     setTimeout(function () {
       india.isActive = true;
-    }, 1000);
+    }, 500);
   });
 
   let animation;

@@ -97,13 +97,15 @@ const OurBrands = () => {
           </Link>
         </div>
         <div>
-          <img
-            src={appleton}
-            id="appleton_component"
-            className="ongc_img"
-            alt="ONGC"
-            srcset=""
-          />
+          <Link to={"/brands/products/appleton"}>
+            <img
+              src={appleton}
+              id="appleton_component"
+              className="ongc_img"
+              alt="ONGC"
+              srcset=""
+            />
+          </Link>
         </div>
       </Slider>
     </div>

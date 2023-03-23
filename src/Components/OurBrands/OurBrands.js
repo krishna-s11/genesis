@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import arflu from "../../Assets/arflu_logo.png";
 import anggerik from "../../Assets/anggerik_logo.png";
 import honeywell from "../../Assets/honeywell_logo.png";
+import uop_callidus from "../../Assets/honeywell_uop.webp";
 import tristar from "../../Assets/tristar_logo.png";
 import appleton from "../../Assets/appleton.png";
 import { Link } from "react-router-dom";
@@ -101,6 +102,17 @@ const OurBrands = () => {
             <img
               src={appleton}
               id="appleton_component"
+              className="ongc_img"
+              alt="ONGC"
+              srcset=""
+            />
+          </Link>
+        </div>
+        <div>
+          <Link to={"/brands/products/uop_callidus"}>
+            <img
+              src={uop_callidus}
+              id="uop_callidus"
               className="ongc_img"
               alt="ONGC"
               srcset=""

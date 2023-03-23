@@ -3,20 +3,12 @@ import "./ourBrands.css";
 import arflu from "../../Assets/logo-arflu.png";
 import anggerik from "../../Assets/anggerik_logo.png";
 import honeywell from "../../Assets/honeywell_logo.png";
+import uop_callidus from "../../Assets/honeywell_uop.webp";
 import tristar from "../../Assets/tristar_logo.png";
-import appleton from "../../Assets/appleton_logo.png";
 import appleton_logo from "../../Assets/appleton.png";
 import { Link } from "react-router-dom";
-import ScrollALittle from "../../Utility/ScrollALittle";
 import { db } from "../../firebase";
-import {
-  getDocs,
-  getDoc,
-  doc,
-  where,
-  collection,
-  query,
-} from "firebase/firestore";
+import { getDocs, where, collection, query } from "firebase/firestore";
 
 const OurBrands = () => {
   const delFun = async () => {
@@ -65,6 +57,11 @@ const OurBrands = () => {
           <div className="logo_container tristar_cont">
             <Link to="/brands/products/tristar">
               <img src={tristar} alt="" id="tristar_brand" srcset="" />
+            </Link>
+          </div>
+          <div className="logo_container tristar_cont">
+            <Link to="/brands/products/uop_callidus">
+              <img src={uop_callidus} alt="" id="tristar_brand" srcset="" />
             </Link>
           </div>
         </div>

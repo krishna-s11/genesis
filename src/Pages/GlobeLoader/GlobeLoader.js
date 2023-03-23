@@ -19,6 +19,9 @@ const GlobeLoader = () => {
   chart.panBehavior = "rotateLongLat";
   chart.deltaLatitude = -20;
   chart.padding(20, 20, 20, 20);
+  chart.events.disableType("down");
+  chart.events.disableType("up");
+  chart.events.disableType("hit");
 
   // Create map polygon series
   var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
@@ -36,6 +39,14 @@ const GlobeLoader = () => {
   polygonTemplate.cursorOverStyle = am4core.MouseCursorStyle.pointer;
   polygonTemplate.url = "https://www.datadrum.com/main.php?package={id}";
   polygonTemplate.urlTarget = "_blank";
+  polygonTemplate.events.disableType("hit");
+  polygonTemplate.events.disableType("up");
+  polygonTemplate.events.disableType("down");
+
+  chart.seriesContainer.events.disableType("doublehit");
+  chart.chartContainer.background.events.disableType("doublehit");
+  chart.seriesContainer.events.disableType("hit");
+  chart.chartContainer.background.events.disableType("hit");
 
   var graticuleSeries = chart.series.push(new am4maps.GraticuleSeries());
   graticuleSeries.mapLines.template.line.stroke = am4core.color("#fff");
@@ -61,7 +72,6 @@ const GlobeLoader = () => {
       india.isActive = true;
     }, 500);
   });
-
   let animation;
   setTimeout(function () {
     animation = chart.animate(
@@ -78,6 +88,10 @@ const GlobeLoader = () => {
       2000
     );
   }, 1000);
+
+  // document.getElementById("chartdiv").addEventListener("click", (e) => {
+  //   e.preventDefault();
+  // });
 
   setTimeout(() => {
     document.getElementById("chartdiv").style.display = "none";

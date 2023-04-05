@@ -4,9 +4,11 @@ import "./products.css";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import ScrollALittle from "../../Utility/ScrollALittle";
+import SearchModal from "../../Components/SearchModal/SearchModal";
 
 const Products = () => {
   const [categories, setCategories] = useState([]);
+  const [display, setDisplay] = useState(true);
 
   const fetchData = async () => {
     const querySnapshot = await getDocs(collection(db, "categories"));
@@ -26,13 +28,30 @@ const Products = () => {
   return (
     <div className="products_pg">
       {/* <ScrollALittle /> */}
+      {display ? (
+        <SearchModal
+          close={() => {
+            setDisplay(false);
+          }}
+        />
+      ) : null}
       <div className="products_hero">
         <div className="hero_overlay_products_pg">
           <h1>Our Products</h1>
         </div>
       </div>
       <div className="products_content_container">
-        <h1>Products</h1>
+        <div style={{ position: "relative" }}>
+          <h1>Products</h1>
+          <button
+            className="btn_search"
+            onClick={() => {
+              setDisplay(true);
+            }}
+          >
+            Search
+          </button>
+        </div>
         <div className="products_card_container">
           {categories.length !== 0 ? (
             categories.map((d) => {

@@ -56,7 +56,18 @@
 .products_pg a {
   color: #000;
 }
-
+.btn_search {
+  background: #f1d358;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
 @media only screen and (max-width: 600px) {
   .products_content_container {
     width: 100%;

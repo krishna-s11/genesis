@@ -1,0 +1,18 @@
+.search_product_card {
+  width: 250px;
+  height: 380px;
+  border-radius: 20px;
+  overflow: hidden;
+  /* margin-right: 20px; */
+}
+.search_product_card img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.search_product_card h3 {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}

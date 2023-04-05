@@ -8,7 +8,7 @@ import SearchModal from "../../Components/SearchModal/SearchModal";
 
 const Products = () => {
   const [categories, setCategories] = useState([]);
-  const [display, setDisplay] = useState(true);
+  const [display, setDisplay] = useState(false);
 
   const fetchData = async () => {
     const querySnapshot = await getDocs(collection(db, "categories"));

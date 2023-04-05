@@ -24,7 +24,7 @@ a {
 /* for mobile */
 @media screen and (max-width: 767px) {
   .whatsapp-icon {
-    margin-top: 10px;
+    margin-top: 16px;
   }
 
   .whatsapp_float {

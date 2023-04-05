@@ -28,10 +28,7 @@ a {
   }
 
   .whatsapp_float {
-    width: 60px;
-    height: 60px;
     bottom: 20px;
     right: 10px;
-    font-size: 22px;
   }
 }

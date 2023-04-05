@@ -10,9 +10,9 @@ const AboutUs = () => {
         <div className="aboutus_lifted_box_left">
           <h1>About Us</h1>
           <p style={{ marginBottom: "30px" }}>
-            Established under the aegis of industry stalwarts having more than
-            40 years of industry experience and exposure to all aspects of
-            product and project lifecycle.
+            Established in 2008, under the aegis of industry stalwarts having
+            more than 40 years of industry experience and exposure to all
+            aspects of product and project lifecycle.
           </p>
           <p style={{ marginBottom: "30px" }}>
             {" "}

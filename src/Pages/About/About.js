@@ -15,12 +15,12 @@ const About = () => {
         <div style={{ display: "flex" }} className="about_us_pg_container">
           <div className="content_about_pg_left">
             <p>
-              Established under the aegis of industry stalwarts having more than
-              40 years of industry experience and exposure to all aspects of
-              product and project lifecycle. Oil and Gas industry demands
-              flexibility of operations and dexterity. Genesis Energy has
-              rapidly established a reputation for offering dynamic solutions
-              with adroitness.
+              Established in 2008, under the aegis of industry stalwarts having
+              more than 40 years of industry experience and exposure to all
+              aspects of product and project lifecycle. Oil and Gas industry
+              demands flexibility of operations and dexterity. Genesis Energy
+              has rapidly established a reputation for offering dynamic
+              solutions with adroitness.
             </p>
             <p>
               We offer solutions with direct / indirect support to end users,

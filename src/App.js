@@ -64,6 +64,14 @@ function App() {
           <Route path="/contact_us" element={<GetInTouch />} />
           <Route path="/admin/dashboard" element={<Dashboard />} />
         </Routes>
+        <a
+          href="https://wa.me/9594358370"
+          class="whatsapp_float"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="fa fa-whatsapp whatsapp-icon"></i>
+        </a>
       </div>
       {document.location.pathname.includes("contact_us") ? null : <Footer />}
       {/* <Footer /> */}

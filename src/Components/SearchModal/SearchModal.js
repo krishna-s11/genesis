@@ -75,6 +75,7 @@ const SearchModal = ({ close }) => {
                   title={product.data.name}
                   id={product.id}
                   img={product.data.img}
+                  brand={product.data.brand}
                 />
               );
             })

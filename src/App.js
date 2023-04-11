@@ -19,6 +19,8 @@ import Loader from "./Components/Loader/Loader";
 import WifiLoader from "./Pages/WifiLoader/WifiLoader";
 import Dashboard from "./Pages/AdminPanel/Dashboard/Dashboard";
 import GlobeLoader from "./Pages/GlobeLoader/GlobeLoader";
+import AppletonSub from "./Pages/AppletonSub/AppletonSub";
+import AppletonProducts from "./Pages/AppletonProducts/AppletonProducts";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -57,6 +59,14 @@ function App() {
             element={<Product />}
           /> */}
           <Route path="brands/products/:brand" element={<Product />} />
+          <Route
+            path="brands/products/appleton/subs"
+            element={<AppletonSub />}
+          />
+          <Route
+            path="brands/products/appleton/subs/:sub"
+            element={<AppletonProducts />}
+          />
           <Route path="/our_brands" element={<OurBrandsPG />} />
           <Route path="/product/:id/:brand" element={<ProductDetail />} />
           <Route path="/projects" element={<Projects />} />

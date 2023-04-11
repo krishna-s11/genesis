@@ -12,6 +12,7 @@ import {
 } from "firebase/firestore";
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import ScrollALittle from "../../Utility/ScrollALittle";
+import Loader from "../../Components/Loader/Loader";
 
 const Product = () => {
   const param = useParams();
@@ -27,19 +28,28 @@ const Product = () => {
 
   const fetchData = async () => {
     if (brand) {
-      const catRef = collection(db, "categories");
-      const catQ = query(catRef, where("brand", "==", brand));
-      const catSnapshot = await getDocs(catQ);
-      setCategory(
-        catSnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-      );
+      if (brand === "appleton") {
+        const querySnapshot = await getDocs(
+          collection(db, "appleton_categories")
+        );
+        setCategory(
+          querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        );
+      } else {
+        const catRef = collection(db, "categories");
+        const catQ = query(catRef, where("brand", "==", brand));
+        const catSnapshot = await getDocs(catQ);
+        setCategory(
+          catSnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        );
 
-      const docRef = collection(db, "products");
-      const q = query(docRef, where("brand", "==", brand));
-      const querySnapshot = await getDocs(q);
-      setProducts(
-        querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-      );
+        const docRef = collection(db, "products");
+        const q = query(docRef, where("brand", "==", brand));
+        const querySnapshot = await getDocs(q);
+        setProducts(
+          querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        );
+      }
     } else {
       const docRef = doc(db, "sub_categories", sub_id);
       const docSnap = await getDoc(docRef);
@@ -79,7 +89,7 @@ const Product = () => {
     }
   }, [brand, subCategory]);
 
-  console.log(products);
+  // console.log(products);
   return (
     <div className="products_pg">
       <ScrollALittle />
@@ -91,6 +101,8 @@ const Product = () => {
       <div className="products_content_container">
         <h1>{heading}</h1>
         <div className="products_card_container">
+          {/* {brand === "appleton" ? ( */}
+          {/* <p>hululu</p> */}
           {category?.length !== 0 ? (
             category?.map((d) => {
               return (
@@ -99,7 +111,7 @@ const Product = () => {
                   title={d.data.name}
                   prodUrl={
                     window.location.href.includes("appleton")
-                      ? `/products/${d.id}/appleton`
+                      ? `/brands/products/appleton/subs`
                       : `/products/${d.id}/undefined`
                   }
                 />
@@ -121,7 +133,7 @@ const Product = () => {
               );
             })
           ) : (
-            <p>Loading</p>
+            <Loader />
           )}
           {/* <ProductCard img={lighting} title="Lightings" /> */}
         </div>

@@ -11,18 +11,7 @@ import { db } from "../../firebase";
 import { getDocs, where, collection, query } from "firebase/firestore";
 
 const OurBrands = () => {
-  const delFun = async () => {
-    const ref = collection(db, "products");
-    const q = query(ref, where("brand", "==", "appleton"));
-    const querySnapshot = await getDocs();
-    querySnapshot.forEach(function (doc) {
-      doc.ref.delete();
-    });
-  };
-
-  useEffect(() => {
-    delFun();
-  });
+  useEffect(() => {});
 
   return (
     <div className="our_brands_pg">

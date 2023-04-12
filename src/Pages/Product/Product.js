@@ -111,7 +111,7 @@ const Product = () => {
                   title={d.data.name}
                   prodUrl={
                     window.location.href.includes("appleton")
-                      ? `/brands/products/appleton/subs`
+                      ? `/brands/products/appleton/${d.id}`
                       : `/products/${d.id}/undefined`
                   }
                 />

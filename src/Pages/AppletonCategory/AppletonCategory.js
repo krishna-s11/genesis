@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import "./appletonProducts.css";
+import "./appletonSub.css";
 import { db } from "../../firebase";
 import {
   getDocs,
@@ -14,13 +14,16 @@ import ProductCard from "../../Components/ProductCard/ProductCard";
 import ScrollALittle from "../../Utility/ScrollALittle";
 import Loader from "../../Components/Loader/Loader";
 
-const AppletonProducts = () => {
+const AppletonCategory = () => {
   const [subCategory, setSubCategory] = useState();
+  const category = useParams().cat;
 
   const fetchData = async () => {
-    const querySnapshot = await getDocs(collection(db, "appleton_sub"));
+    const ref = collection(db, "appleton_sub");
+    const q = query(ref, where("category", "==", category));
+    const catSnapshot = await getDocs(q);
     setSubCategory(
-      querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+      catSnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
     );
   };
   useEffect(() => {
@@ -38,10 +41,24 @@ const AppletonProducts = () => {
       </div>
       <div className="products_content_container">
         <h1>Appleton</h1>
-        <div className="products_card_container"></div>
+        <div className="products_card_container">
+          {subCategory?.length > 0 ? (
+            subCategory.map((d) => {
+              return (
+                <ProductCard
+                  img={d.data.img}
+                  title={d.data.name}
+                  prodUrl={`${d.id}`}
+                />
+              );
+            })
+          ) : (
+            <Loader />
+          )}
+        </div>
       </div>
     </div>
   );
 };
 
-export default AppletonProducts;
+export default AppletonCategory;

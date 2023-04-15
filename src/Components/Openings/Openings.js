@@ -7,10 +7,10 @@ const Openings = (props) => {
     e.preventDefault();
     const box = document.getElementsByClassName("opening");
     console.log(box.length);
-    for (var i = 0; i < box.length; i++) {
-      box[i].classList.toggle("extended");
-    }
+    box[props.id].classList.toggle("extended");
   };
+
+  console.log(props);
 
   return (
     <div className="opening" onClick={handleClick}>
@@ -18,35 +18,35 @@ const Openings = (props) => {
       <img src={dropdown} alt="" srcset="" />
       <hr></hr>
       <h3>The Opportunity</h3>
-      {props.opp.map((d) => {
+      {props?.opp.map((d) => {
         return <p>{d}</p>;
       })}
       <h3 className="opening_heading">Key Responsibility</h3>
       <ul>
-        {props.resp.map((d) => {
+        {props?.resp.map((d) => {
           return <li>{d}</li>;
         })}
       </ul>
       <h3 className="opening_heading">You Must Have</h3>
       <ul>
-        {props.must.map((d) => {
+        {props?.must.map((d) => {
           return <li>{d}</li>;
         })}
       </ul>
       <h3 className="opening_heading">We Value</h3>
       <ul>
-        {props.value.map((d) => {
+        {props?.value.map((d) => {
           return <li>{d}</li>;
         })}
       </ul>
       <h3 className="opening_heading">Qualifications</h3>
       <ul>
-        {props.qualification.map((d) => {
+        {props?.qualification.map((d) => {
           return <li>{d}</li>;
         })}
       </ul>
       <h3 className="opening_heading">Location</h3>
-      <p>{props.location}</p>
+      <p>{props?.location}</p>
     </div>
   );
 };

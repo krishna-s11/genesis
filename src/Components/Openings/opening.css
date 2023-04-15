@@ -10,8 +10,7 @@
   overflow: hidden;
 }
 .extended {
-  height: 1000px !important;
-  overflow-y: scroll;
+  height: 100% !important;
 }
 .opening img {
   width: 20px;

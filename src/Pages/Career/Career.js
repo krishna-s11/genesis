@@ -93,7 +93,7 @@ const Career = () => {
         </div>
       </div>
       <div className="content_career_pg">
-        <h1>Career</h1>
+        <h1>Careers</h1>
         <p>
           Established in 2008, under the aegis of industry stalwarts having more
           than 40 years of industry experience and exposure to all aspects of
@@ -109,7 +109,7 @@ const Career = () => {
           products, value added services and cutting-edge technologies and To be
           the world’s most trusted solution provider for Energy Sector
         </p>
-        <h2>Life @ Genesis</h2>
+        <h2>Life @ Genesis Energy</h2>
         <p>
           We are a dynamic and innovative company dedicated to providing
           cutting-edge technology solutions to our clients. Our clients range
@@ -142,7 +142,7 @@ const Career = () => {
             vijay@gepl.biz
           </a>
         </p>
-        {opportunity.map((d) => {
+        {opportunity.map((d, i) => {
           return (
             <Openings
               title={d.title}
@@ -152,6 +152,8 @@ const Career = () => {
               value={d.value}
               qualification={d.qualification}
               location={d.location}
+              key={i}
+              id={i}
             />
           );
         })}

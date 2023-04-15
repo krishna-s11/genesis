@@ -1,0 +1,41 @@
+.opening {
+  width: 100%;
+  background-color: #fbf6f6;
+  padding: 20px;
+  margin-top: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 60px;
+  overflow: hidden;
+}
+.extended {
+  height: 1000px !important;
+  overflow-y: scroll;
+}
+.opening img {
+  width: 20px;
+  position: absolute;
+  right: 20px;
+  top: 22px;
+}
+.opening h3:first-child {
+  margin-bottom: 20px;
+  width: 250px;
+}
+.opening hr {
+  margin-bottom: 20px;
+}
+.opening p {
+  margin-top: 20px;
+}
+.opening_heading {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.opening ul {
+  margin-left: 20px;
+}
+.opening ul li {
+  margin-bottom: 10px;
+}

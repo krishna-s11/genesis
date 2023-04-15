@@ -44,18 +44,22 @@ const AppletonSub = () => {
       <div className="products_content_container">
         <h1>Appleton</h1>
         <div className="products_card_container">
-          {products?.length > 0 ? (
-            products.map((d) => {
-              return (
-                <ProductCard
-                  img={d.data.img}
-                  title={d.data.name}
-                  prodUrl={`/product/${d.id}/appleton`}
-                />
-              );
-            })
+          {sub !== "38ih1tZEW87usJkYMdRi" ? (
+            products?.length > 0 ? (
+              products.map((d) => {
+                return (
+                  <ProductCard
+                    img={d.data.img}
+                    title={d.data.name}
+                    prodUrl={`/product/${d.id}/appleton`}
+                  />
+                );
+              })
+            ) : (
+              <Loader />
+            )
           ) : (
-            <Loader />
+            <h3>Coming Soon...</h3>
           )}
         </div>
       </div>

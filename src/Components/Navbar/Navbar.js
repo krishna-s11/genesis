@@ -124,6 +124,9 @@ const Navbar = () => {
         <Link to="/services" onClick={resetWidth}>
           <li className="nav_items">Services</li>
         </Link>
+        <Link to="/careers" onClick={resetWidth}>
+          <li className="nav_items">Career</li>
+        </Link>
         <Link to="/contact_us" onClick={resetWidth}>
           <li className="nav_items">Get in touch</li>
         </Link>

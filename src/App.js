@@ -22,6 +22,7 @@ import GlobeLoader from "./Pages/GlobeLoader/GlobeLoader";
 import AppletonSub from "./Pages/AppletonSub/AppletonSub";
 import AppletonProducts from "./Pages/AppletonSub/AppletonSub";
 import AppletonCategory from "./Pages/AppletonCategory/AppletonCategory";
+import Career from "./Pages/Career/Career";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -74,6 +75,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/contact_us" element={<GetInTouch />} />
           <Route path="/admin/dashboard" element={<Dashboard />} />
+          <Route path="/careers" element={<Career />} />
         </Routes>
         <a
           href="https://wa.me/9594358370"

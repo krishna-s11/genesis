@@ -1,0 +1,55 @@
+.career_pg {
+  width: 100%;
+}
+.hero_career_pg {
+  width: 100%;
+  height: 50vh;
+  background: url(../../Assets/hero.jpeg) no-repeat;
+  background-size: cover;
+  background-position: 100%;
+  position: relative;
+}
+.hero_overlay_career_pg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    189deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(85, 84, 84, 0.4) 100%
+  );
+  color: #fff;
+}
+.hero_overlay_career_pg h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.content_career_pg {
+  width: 100%;
+  padding: 50px 120px;
+}
+.content_career_pg h1:first-child {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content_career_pg p {
+  margin-top: 30px;
+  line-height: 30px;
+}
+.content_career_pg h2 {
+  margin-top: 30px;
+}
+.content_career_pg_left {
+  width: 100%;
+  padding-top: 20px;
+}

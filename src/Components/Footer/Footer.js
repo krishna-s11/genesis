@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ImLocation2 } from "react-icons/im";
 import { GiFactory } from "react-icons/gi";
 import { BsFillTelephoneFill } from "react-icons/bs";
+import { MdAlternateEmail } from "react-icons/md";
 import Loader from "../Loader/Loader";
 
 const Footer = () => {
@@ -110,6 +111,18 @@ const Footer = () => {
           />
           Industrial Shed - 1, Rashid Compound, NH8 Highway, Near Bavkhal Petrol
           Pump, Virar - East, District - Palghar, Maharashtra - 401208
+        </p>
+        <p>
+          <MdAlternateEmail
+            style={{
+              transform: "translateY(2px)",
+              marginRight: "10px",
+              marginTop: "10px",
+            }}
+          />
+          <a href="mailto: vijay@gepl.biz" target="_blank" rel="noreferrer">
+            vijay@gepl.biz
+          </a>
         </p>
         <p>
           <BsFillTelephoneFill

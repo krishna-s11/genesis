@@ -4,9 +4,12 @@ import "./navbar.css";
 import logo from "../../Assets/logo.png";
 import { GrClose } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
+import search from "../../Assets/search.png";
+import SearchModal from "../SearchModal/SearchModal";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const [display, setDisplay] = useState(false);
   window.scroll(function () {
     var nav = document.getElementsByClassName("navbar");
     console.log(nav);
@@ -24,6 +27,13 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
+      {display ? (
+        <SearchModal
+          close={() => {
+            setDisplay(false);
+          }}
+        />
+      ) : null}
       <div style={{ fontWeight: "700", color: "#f1d358" }}>
         {"              "}
       </div>
@@ -61,7 +71,20 @@ const Navbar = () => {
           <li className="nav_items">About us</li>
         </Link>
         <Link to="/products" onClick={resetWidth} id="product">
-          <li className="nav_items">Products</li>
+          <li className="nav_items" style={{ position: "relative" }}>
+            Products{" "}
+            {/* <span>
+              <img
+                src={search}
+                id="search_icon"
+                alt=""
+                srcset=""
+                onClick={() => {
+                  setDisplay(true);
+                }}
+              />
+            </span> */}
+          </li>
           <div className="dropdown">
             <ul>
               <Link to="/products/qxLDeuq6UtomdtONMLoh/undefined">
@@ -125,11 +148,24 @@ const Navbar = () => {
           <li className="nav_items">Services</li>
         </Link>
         <Link to="/careers" onClick={resetWidth}>
-          <li className="nav_items">Career</li>
+          <li className="nav_items">Work with us</li>
         </Link>
         <Link to="/contact_us" onClick={resetWidth}>
           <li className="nav_items">Get in touch</li>
         </Link>
+        {/* <Link to="/contact_us" onClick={resetWidth}> */}
+        <li className="nav_items">
+          <img
+            src={search}
+            id="search_icon"
+            alt=""
+            srcset=""
+            onClick={() => {
+              setDisplay(true);
+            }}
+          />
+        </li>
+        {/* </Link> */}
       </ul>
     </div>
   );

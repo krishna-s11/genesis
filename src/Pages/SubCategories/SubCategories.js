@@ -12,6 +12,7 @@ import {
 } from "firebase/firestore";
 import ProductCard from "../../Components/ProductCard/ProductCard";
 import ScrollALittle from "../../Utility/ScrollALittle";
+import SearchModal from "../../Components/SearchModal/SearchModal";
 
 const SubCategories = () => {
   const category = useParams();
@@ -20,6 +21,7 @@ const SubCategories = () => {
   const [subCategory, setSubCategory] = useState([]);
   const [products, setProducts] = useState();
   const [emFlag, setEmFlag] = useState(1);
+  const [display, setDisplay] = useState(false);
   console.log(brand.brand);
   const fetchData = async () => {
     const cat_docRef = doc(db, "categories", category.category);
@@ -66,6 +68,13 @@ const SubCategories = () => {
 
   return (
     <div className="products_pg">
+      {display ? (
+        <SearchModal
+          close={() => {
+            setDisplay(false);
+          }}
+        />
+      ) : null}
       <ScrollALittle />
       <div className="products_hero">
         <div className="hero_overlay_products_pg">
@@ -73,12 +82,22 @@ const SubCategories = () => {
         </div>
       </div>
       <div className="products_content_container">
-        <h1>
-          {categoryData
-            ? categoryData?.name.charAt(0).toUpperCase() +
-              categoryData?.name.slice(1)
-            : null}
-        </h1>
+        <div style={{ position: "relative" }}>
+          <h1>
+            {categoryData
+              ? categoryData?.name.charAt(0).toUpperCase() +
+                categoryData?.name.slice(1)
+              : null}
+          </h1>
+          <button
+            className="btn_search"
+            onClick={() => {
+              setDisplay(true);
+            }}
+          >
+            Search
+          </button>
+        </div>
         <div className="products_card_container">
           {/* {emFlag ? (
             subCategory ? (

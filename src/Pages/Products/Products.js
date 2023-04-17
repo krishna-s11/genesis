@@ -8,6 +8,7 @@ import SearchModal from "../../Components/SearchModal/SearchModal";
 
 const Products = () => {
   const [categories, setCategories] = useState([]);
+  const [appleton, setAppletonCategories] = useState([]);
   const [display, setDisplay] = useState(false);
 
   const fetchData = async () => {
@@ -17,12 +18,17 @@ const Products = () => {
         .map((doc) => ({ id: doc.id, data: doc.data() }))
         .sort((a, b) => a.data.prec - b.data.prec)
     );
+    const appletonSnapshot = await getDocs(
+      collection(db, "appleton_categories")
+    );
+    setAppletonCategories(
+      appletonSnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+    );
   };
 
   useEffect(() => {
     fetchData();
     categories.sort((a, b) => a.data.prec - b.data.prec);
-    console.log(categories);
   }, []);
 
   return (
@@ -66,6 +72,15 @@ const Products = () => {
           ) : (
             <p>Loading... </p>
           )}
+          {appleton?.map((d) => {
+            return (
+              <ProductCard
+                img={d.data.img}
+                title={d.data.name}
+                url={`/brands/products/appleton/${d.id}`}
+              />
+            );
+          })}
           {/* <ProductCard img={lighting} title="Lightings" /> */}
         </div>
       </div>

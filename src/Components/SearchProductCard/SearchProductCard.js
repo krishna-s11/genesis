@@ -8,7 +8,7 @@ const SearchProductCard = (props) => {
     <div
       className="search_product_card"
       onClick={() => {
-        props.brand === "appleton"
+        props.brand === "appleton" || props.brand === "Appleton"
           ? navigate(`/product/${props.id}/appleton`)
           : navigate(`/product/${props.id}/undefined`);
       }}

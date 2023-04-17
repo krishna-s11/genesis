@@ -1,6 +1,6 @@
 .navbar {
   width: 100%;
-  padding: 50px 80px;
+  padding: 50px 40px;
   background-color: #f1d358;
   position: fixed;
   top: 0;
@@ -89,6 +89,14 @@
 }
 .dropdown ul li {
   margin-bottom: 20px;
+}
+#search_icon {
+  width: 18px;
+  /* margin-top: 5px; */
+  transform: translateY(3px);
+
+  /* position: absolute; */
+  /* margin-left: 20px; */
 }
 #close_btn {
   position: absolute;

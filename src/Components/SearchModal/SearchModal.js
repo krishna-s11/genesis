@@ -10,27 +10,34 @@ const SearchModal = ({ close }) => {
   const [products, setProducts] = useState([]);
   const [appleton, setAppleton] = useState([]);
   const [filter, setFilter] = useState("");
+  const [finalProducts, setFinalProducts] = useState([]);
   const fetchData = async () => {
     const querySnapshot = await getDocs(collection(db, "products"));
     setProducts(
       querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
     );
-  };
-  const fetchAppleton = async () => {
-    const querySnapshot = await getDocs(collection(db, "appleton"));
+    const appletonSnapshot = await getDocs(collection(db, "appleton"));
     setAppleton(
-      querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+      appletonSnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
     );
+    // setFinalProducts([...products, ...appleton]);
   };
+  // const fetchAppleton = async () => {
+  //   const querySnapshot = await getDocs(collection(db, "appleton"));
+  //   setAppleton(
+  //     querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+  //   );
+  // };
 
   useEffect(() => {
     fetchData();
-    // fetchAppleton();
-  }, []);
-  //   console.log(products);
-  //   console.log(appleton);
+    setFinalProducts([...products, ...appleton]);
+  }, [products, appleton]);
+  console.log(products);
+  console.log(appleton);
+  console.log(finalProducts);
 
-  const filterData = products.filter(({ data }) => {
+  const filterData = finalProducts.filter(({ data }) => {
     return data.name.toLowerCase().includes(filter.toLowerCase());
   });
 
@@ -69,13 +76,14 @@ const SearchModal = ({ close }) => {
         />
         <div className="search_products">
           {filterData.length !== 0 ? (
-            filterData.map((product) => {
+            filterData.map((product, i) => {
               return (
                 <SearchProductCard
                   title={product.data.name}
                   id={product.id}
                   img={product.data.img}
                   brand={product.data.brand}
+                  key={i}
                 />
               );
             })

@@ -53,3 +53,10 @@
   width: 100%;
   padding-top: 20px;
 }
+
+@media only screen and (max-width: 600px) {
+  .content_career_pg {
+    width: 100%;
+    padding: 50px 20px;
+  }
+}

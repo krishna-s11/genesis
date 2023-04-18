@@ -93,7 +93,7 @@ const Career = () => {
         </div>
       </div>
       <div className="content_career_pg">
-        <h1>Careers</h1>
+        <h1>Work With Us</h1>
         <p>
           Established in 2008, under the aegis of industry stalwarts having more
           than 40 years of industry experience and exposure to all aspects of

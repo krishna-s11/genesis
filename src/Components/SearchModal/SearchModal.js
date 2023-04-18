@@ -12,14 +12,14 @@ const SearchModal = ({ close }) => {
   const [filter, setFilter] = useState("");
   const [finalProducts, setFinalProducts] = useState([]);
   const fetchData = async () => {
-    const querySnapshot = await getDocs(collection(db, "products"));
-    setProducts(
-      querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-    );
-    const appletonSnapshot = await getDocs(collection(db, "appleton"));
-    setAppleton(
-      appletonSnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-    );
+    // const querySnapshot = await getDocs(collection(db, "products"));
+    // setProducts(
+    //   querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+    // );
+    // const appletonSnapshot = await getDocs(collection(db, "appleton"));
+    // setAppleton(
+    //   appletonSnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+    // );
     // setFinalProducts([...products, ...appleton]);
   };
   // const fetchAppleton = async () => {
@@ -31,11 +31,8 @@ const SearchModal = ({ close }) => {
 
   useEffect(() => {
     fetchData();
-    setFinalProducts([...products, ...appleton]);
+    // setFinalProducts([...products, ...appleton]);
   }, [products, appleton]);
-  console.log(products);
-  console.log(appleton);
-  console.log(finalProducts);
 
   const filterData = finalProducts.filter(({ data }) => {
     return data.name.toLowerCase().includes(filter.toLowerCase());

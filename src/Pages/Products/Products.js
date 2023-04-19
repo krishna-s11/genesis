@@ -5,6 +5,7 @@ import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 import ScrollALittle from "../../Utility/ScrollALittle";
 import SearchModal from "../../Components/SearchModal/SearchModal";
+import search from "../../Assets/search.png";
 
 const Products = () => {
   const [categories, setCategories] = useState([]);
@@ -55,7 +56,11 @@ const Products = () => {
               setDisplay(true);
             }}
           >
-            Search
+            {window.innerWidth < 600 ? (
+              <img src={search} alt="" srcset="" style={{ width: "20px" }} />
+            ) : (
+              "Search"
+            )}
           </button>
         </div>
         <div className="products_card_container">

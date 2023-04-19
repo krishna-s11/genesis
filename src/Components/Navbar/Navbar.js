@@ -148,10 +148,10 @@ const Navbar = () => {
           <li className="nav_items">Services</li>
         </Link>
         <Link to="/contact_us" onClick={resetWidth}>
-          <li className="nav_items">Get in touch</li>
+          <li className="nav_items">Get In Touch</li>
         </Link>
         <Link to="/careers" onClick={resetWidth}>
-          <li className="nav_items">Work with us</li>
+          <li className="nav_items">Work With Us</li>
         </Link>
         {/* <Link to="/contact_us" onClick={resetWidth}> */}
         <li className="nav_items">

@@ -101,6 +101,7 @@ const Footer = () => {
             minWidth: "350px",
             maxWidth: "430px",
             marginTop: "10px",
+            textAlign: "justify",
           }}
         >
           <GiFactory

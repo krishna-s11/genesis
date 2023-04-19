@@ -8,33 +8,24 @@ import Loader from "../Loader/Loader";
 
 const SearchModal = ({ close }) => {
   const [products, setProducts] = useState([]);
-  const [appleton, setAppleton] = useState([]);
   const [filter, setFilter] = useState("");
-  const [finalProducts, setFinalProducts] = useState([]);
   const fetchData = async () => {
-    // const querySnapshot = await getDocs(collection(db, "products"));
-    // setProducts(
-    //   querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-    // );
-    // const appletonSnapshot = await getDocs(collection(db, "appleton"));
-    // setAppleton(
-    //   appletonSnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-    // );
-    // setFinalProducts([...products, ...appleton]);
+    const querySnapshot = await getDocs(collection(db, "products"));
+    setProducts(
+      querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+    );
+    const appletonSnapshot = await getDocs(collection(db, "appleton"));
+    setProducts((old) => [
+      ...old,
+      ...appletonSnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })),
+    ]);
   };
-  // const fetchAppleton = async () => {
-  //   const querySnapshot = await getDocs(collection(db, "appleton"));
-  //   setAppleton(
-  //     querySnapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
-  //   );
-  // };
 
   useEffect(() => {
     fetchData();
-    // setFinalProducts([...products, ...appleton]);
-  }, [products, appleton]);
+  }, []);
 
-  const filterData = finalProducts.filter(({ data }) => {
+  const filterData = products.filter(({ data }) => {
     return data.name.toLowerCase().includes(filter.toLowerCase());
   });
 
@@ -42,10 +33,8 @@ const SearchModal = ({ close }) => {
     setFilter(e.target.value);
   };
 
-  console.log(filterData);
-
   return (
-    <div className="search_modal">
+    <div className="search_modal" onClick={close}>
       <div className="search_modal_box">
         <div className="heading_container">
           <h1>Search Products</h1>

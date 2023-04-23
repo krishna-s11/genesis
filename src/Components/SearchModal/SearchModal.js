@@ -23,6 +23,12 @@ const SearchModal = ({ close }) => {
 
   useEffect(() => {
     fetchData();
+    window.onclick = function (event) {
+      var modal_box = document.getElementById("modal_box");
+      if (event.target.contains(modal_box) && event.target !== modal_box) {
+        close();
+      }
+    };
   }, []);
 
   const filterData = products.filter(({ data }) => {
@@ -34,8 +40,8 @@ const SearchModal = ({ close }) => {
   };
 
   return (
-    <div className="search_modal" onClick={close}>
-      <div className="search_modal_box">
+    <div className="search_modal">
+      <div className="search_modal_box" id="modal_box">
         <div className="heading_container">
           <h1>Search Products</h1>
           <img

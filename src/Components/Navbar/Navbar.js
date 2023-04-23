@@ -112,7 +112,14 @@ const Navbar = () => {
             </ul>
           </div>
         </Link>
-        <li className="nav_items mob_item">Search Product</li>
+        <li
+          className="nav_items mob_item"
+          onClick={() => {
+            setDisplay(true);
+          }}
+        >
+          Search Products
+        </li>
         <Link to="/our_brands" onClick={resetWidth}>
           <li className="nav_items" id="brands">
             Our Brands

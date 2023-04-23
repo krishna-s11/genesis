@@ -116,6 +116,18 @@
   cursor: pointer;
   display: none;
 }
+.mob_item {
+  display: none;
+}
+.desk_item {
+  display: block;
+}
+#new_tag {
+  width: 30px;
+  position: absolute;
+  top: -45%;
+  left: 68%;
+}
 @media only screen and (max-width: 1280px) {
   .navbar {
     padding: 50px;
@@ -166,6 +178,16 @@
   #brands:hover > .dropdown {
     display: none;
     /* height: 300px; */
+  }
+  .mob_item {
+    display: block;
+  }
+  .desk_item {
+    display: none;
+  }
+  #new_tag {
+    top: -140%;
+    left: 80%;
   }
 }
 @media only screen and (max-width: 400px) {

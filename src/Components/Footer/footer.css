@@ -99,6 +99,9 @@
   .footer_map_holder img {
     width: 400px;
   }
+  .footer_map_holder p {
+    margin: 0 10px;
+  }
 }
 @media only screen and (max-width: 400px) {
   .footer_map_holder img {

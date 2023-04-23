@@ -113,6 +113,23 @@ const Footer = () => {
           Industrial Shed - 1, Rashid Compound, NH8 Highway, Near Bavkhal Petrol
           Pump, Virar - East, District - Palghar, Maharashtra - 401208
         </p>
+        <p
+          style={{
+            marginBottom: "5px",
+            minWidth: "350px",
+            maxWidth: "430px",
+            marginTop: "10px",
+            textAlign: "justify",
+          }}
+        >
+          <GiFactory
+            style={{
+              transform: "translateY(2px)",
+              marginRight: "10px",
+            }}
+          />
+          133 New Bridge Road, #17-01 Chinatown Point Singapore, 059413
+        </p>
         <p>
           <MdAlternateEmail
             style={{

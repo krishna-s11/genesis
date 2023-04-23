@@ -6,6 +6,7 @@ import { GrClose } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
 import search from "../../Assets/search.png";
 import SearchModal from "../SearchModal/SearchModal";
+import newstar from "../../Assets/new.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -111,6 +112,7 @@ const Navbar = () => {
             </ul>
           </div>
         </Link>
+        <li className="nav_items mob_item">Search Product</li>
         <Link to="/our_brands" onClick={resetWidth}>
           <li className="nav_items" id="brands">
             Our Brands
@@ -150,11 +152,16 @@ const Navbar = () => {
         <Link to="/contact_us" onClick={resetWidth}>
           <li className="nav_items">Get In Touch</li>
         </Link>
-        <Link to="/careers" onClick={resetWidth}>
+        <Link
+          to="/careers"
+          onClick={resetWidth}
+          style={{ position: "relative" }}
+        >
           <li className="nav_items">Work With Us</li>
+          <img src={newstar} alt="" srcset="" id="new_tag" />
         </Link>
         {/* <Link to="/contact_us" onClick={resetWidth}> */}
-        <li className="nav_items">
+        <li className="nav_items desk_item">
           <img
             src={search}
             id="search_icon"

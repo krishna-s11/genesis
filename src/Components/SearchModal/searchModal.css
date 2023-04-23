@@ -42,3 +42,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media only screen and (max-width: 539px) {
+  .search_products {
+    justify-content: center;
+  }
+}

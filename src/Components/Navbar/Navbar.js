@@ -6,7 +6,7 @@ import { GrClose } from "react-icons/gr";
 import { GiHamburgerMenu } from "react-icons/gi";
 import search from "../../Assets/search.png";
 import SearchModal from "../SearchModal/SearchModal";
-import newstar from "../../Assets/new.png";
+import newstar from "../../Assets/new1.png";
 
 const Navbar = () => {
   const navigate = useNavigate();
